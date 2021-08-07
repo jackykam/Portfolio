@@ -35,7 +35,6 @@ span.mainContainer{
     margin: auto;}
 span.menuSpan{
     position: absolute;
-    border: 5px solid rgba(0, 0, 0, 1);
     border-radius: 20px;;
     background-color: rgba(255, 255, 255, 0.0);
     top: 20px;
