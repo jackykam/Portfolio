@@ -1,7 +1,7 @@
 
 
 body {
-    background: url('./Assets/background1.jpg') no-repeat center fixed;
+    background: url('./Assets/background.jpg') no-repeat center fixed;
     background-size: cover;
 }
 /* Custom Scrollbar */
