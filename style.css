@@ -258,6 +258,7 @@ div.descLine{
     position: relative;
     background: linear-gradient(to left bottom, rgb(87, 38, 201, 0.6) 40%, rgba(13, 69, 253, 0.6) 80%);
     height: 30%;
+    min-height: 200px;
     margin-top: 10px;
     padding: 0px;
     vertical-align: center;
@@ -341,8 +342,7 @@ button.descHeadings{
     text-align: center;
     overflow: hidden;}
 button.descHeadings:hover{
-    color: rgb(122, 122, 122);
-}
+    color: rgb(122, 122, 122);}
 @media screen and (min-width: 1000px){
     button.descHeadings{
         font-size: calc(16px + 0.6vw);
