@@ -106,7 +106,7 @@ var projectsComplete = [
     },
     //Project8 : Audio Synthesizer Glove
     {
-        title: "Audio Synthesizer Glove",
+        title: "Audio Synth Glove",
         img: "Assets/iconProject8.jpg",
         classifiers: "Drafting | Software",
         date: "April 2021",
