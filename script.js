@@ -90,7 +90,6 @@ var projectsComplete = [
         software: "3/10",
         desc: "University Year 1 project. Design and fabricate a device capable of retrieving an assortment of objects in a given period of time. Body created from aluminum, coded for Arduino in C++."
     },
-
     //Project7 : Line Following Robot
     {
         title: "Line Following Robot",

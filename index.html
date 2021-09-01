@@ -29,16 +29,16 @@
             </button>
             <div class="collapse navbar-collapse" id="main_nav">
 	            <ul class="navbar-nav ms-auto">
-		            <li class="nav-item"><a class="nav-link" onclick="menuPage('homeSpan')"><img src="Assets/homeDrop.png" style="width: 48px; padding-right: 10px;">  Home</a></li>
-		            <li class="nav-item"><a class="nav-link" onclick="menuPage('projectSpan'), createTable(0)"><img src="Assets/gridDrop.png" style="width: 48px; padding-right: 10px;">  Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" onclick="menuPage('contactSpan')"><img src="Assets/contactDrop.png" style="width: 48px; padding-right: 10px;">   Contact</a></li>
+		            <li class="nav-item"><a class="nav-link" onclick="menuPage('homeSpan')"><img src="Assets/icons/homeDrop.png" style="width: 48px; padding-right: 10px;">  Home</a></li>
+		            <li class="nav-item"><a class="nav-link" onclick="menuPage('projectSpan'), createTable(0)"><img src="Assets/icons/gridDrop.png" style="width: 48px; padding-right: 10px;">  Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="menuPage('contactSpan')"><img src="Assets/icons/contactDrop.png" style="width: 48px; padding-right: 10px;">   About</a></li>
 	            </ul>
             </div>
         </div>
     </nav>
     <!--==================================================================================================================================================-->
     <span class="mainContainer w-100 h-100">
-        <!-------Home Page------->\
+        <!-------Home Page------->
         <span class="menuSpan" id="homeSpan" style="display:block;">
             <div class="row flex-md-row-reverse justify-content-center">
                 <img class="homeImage col-md-6" src="Assets/selfie.jpg">
@@ -51,8 +51,26 @@
                 &emsp; Hi there! my name is Jacky Kam. I am a student at the University of British Columbia currently studying Integrated Engineering.<br><br>
                 &emsp;I enjoy designing, coding, and making projects as struggling to find creative and innovative solutions always drives me to expand my general knowledge and learn new skills!
                 Some of my interests include mechanical design, mobile/web software development, and robotics. Currently, I am learning Python and applying that for future Machine Learning projects.<br><br>
-                &emsp;If you would like to check out some of my past & ongoing projects, click <text class="projectsLink" onclick="menuPage('projectSpan'), createTable(0)">here</text>.
+                &emsp;If you would like to check out some of my past & ongoing projects, click <text class="projectsLink" onclick="menuPage('projectSpan'), createTable(0)">here</text>.<br>
             </div>
+            <div class="contact" style="position:relative;top:80px;padding-bottom:50px;font-size:30px;color:white;">
+                <center><text>Contact Me!</text><br>
+                <text style="margin:10px;color:rgb(136, 253, 152); font-size: 24px;">jkam923@gmail.com</text>
+                <table>
+                    <tr>
+                        <td style="padding: 5px;"><img src="Assets/icons/iconLinkedIn.png" onclick="window.open('https://www.linkedin.com/in/jacky-kam-813075207/', '_newtab')"></td>
+                        <td style="padding: 5px;"><img src="Assets/icons/iconFacebook.png" onclick="window.open('https://www.facebook.com/profile.php?id=100006254537652', '_newtab')"></td>
+                        <td style="padding: 5px;"><img src="Assets/icons/iconInstagram.png" onclick="window.open('https://www.instagram.com/jacky.kam01?r=nametag', '_newtab')"></td>
+                        <td style="padding: 5px;"><img src="Assets/icons/iconGithub.png" onclick="window.open('https://github.com/jackykam', '_newtab')"></td>
+                        <td style="padding: 5px;"><img src="Assets/icons/iconYoutube.png" onclick="window.open('https://www.youtube.com/channel/UCChlkrTA0DMSS9GRHNfU7vA', '_newtab')"></td>
+                    </tr>
+                </table>
+                </center>
+            </div>
+        </span>
+        <!-------About me page-------->
+        <span class="menuSpan" id="contactSpan">
+            ABOUT
         </span>
 
         <!-------Project Table Page------->
@@ -67,11 +85,6 @@
             </div>
             <div class="projectTable position-relative" id="projectTable"></div>
             
-        </span>
-
-        <!-------Contact me page-------->
-        <span class="menuSpan" id="contactSpan">
-            CONTACT
         </span>
 
         <!-------Project Description Page------->
@@ -89,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <img src="Assets/menuClose.png" class="closeButton" onclick="closeAll()">
+            <img src="Assets/icons/menuClose.png" class="closeButton" onclick="closeAll()">
         <!--==================================================================================================================================================-->
             <!--Project 1: Sumobot-->
             <div class="projectMain w-100" id="projectMain1">
