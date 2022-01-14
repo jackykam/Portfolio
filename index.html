@@ -58,11 +58,11 @@
                 <text style="margin:10px;color:rgb(136, 253, 152); font-size: 24px;">jkam923@gmail.com</text>
                 <table>
                     <tr>
-                        <td style="padding: 5px;"><img src="Assets/icons/iconLinkedIn.png" onclick="window.open('https://www.linkedin.com/in/jacky-kam-813075207/', '_newtab')"></td>
-                        <td style="padding: 5px;"><img src="Assets/icons/iconFacebook.png" onclick="window.open('https://www.facebook.com/profile.php?id=100006254537652', '_newtab')"></td>
-                        <td style="padding: 5px;"><img src="Assets/icons/iconInstagram.png" onclick="window.open('https://www.instagram.com/jacky.kam01?r=nametag', '_newtab')"></td>
-                        <td style="padding: 5px;"><img src="Assets/icons/iconGithub.png" onclick="window.open('https://github.com/jackykam', '_newtab')"></td>
-                        <td style="padding: 5px;"><img src="Assets/icons/iconYoutube.png" onclick="window.open('https://www.youtube.com/channel/UCChlkrTA0DMSS9GRHNfU7vA', '_newtab')"></td>
+                        <td style="padding: 5px;"><img class="mediaIcon" src="Assets/icons/iconLinkedIn.png" onclick="window.open('https://www.linkedin.com/in/jacky-kam-813075207/', '_newtab')"></td>
+                        <td style="padding: 5px;"><img class="mediaIcon" src="Assets/icons/iconFacebook.png" onclick="window.open('https://www.facebook.com/profile.php?id=100006254537652', '_newtab')"></td>
+                        <td style="padding: 5px;"><img class="mediaIcon" src="Assets/icons/iconInstagram.png" onclick="window.open('https://www.instagram.com/jacky.kam01?r=nametag', '_newtab')"></td>
+                        <td style="padding: 5px;"><img class="mediaIcon" src="Assets/icons/iconGithub.png" onclick="window.open('https://github.com/jackykam', '_newtab')"></td>
+                        <td style="padding: 5px;"><img class="mediaIcon" src="Assets/icons/iconYoutube.png" onclick="window.open('https://www.youtube.com/channel/UCChlkrTA0DMSS9GRHNfU7vA', '_newtab')"></td>
                     </tr>
                 </table>
                 </center>
@@ -1357,7 +1357,7 @@
                             </div>
                             <p class="overviewTextSynopses col-md-7">The ability to make subtle and deliberate movements in day to day life is often overlooked. For many afflicted with hand tremors (such as those with severe anxiety or Parkinson's Disease) suffer from hand tremors which can complicate simple tasks such as drinking from a cup or writing with a pen.</p>
                         </div>
-                        <p class="overviewTextFiller">My team's plan is to create a product which uses myoware sensors to detect electrical impulses in the user. A machine learning algorithm is to monitor these electrical signals and determine whether a movement is voluntary or involuntary (tremors). The device in turn will mitigate or reduce these tremors mechanically or electrically (to be determined). The motivation is to have an end product which can easily be put on and taken off without impeding the everyday actions of the user. </p>
+                        <p class="overviewTextFiller">My team's plan is to create a product which combines electromyography alongside accelerometer and gyrometer sensors to monitor the hand motions of the user. A machine learning algorithm is to analyze these electrical signals and determine whether a movement is voluntary or involuntary (tremoring). The device in turn will mitigate or reduce these tremors mechanically through the use of angular momentum produced by a flywheel mounted on the rear of the palm. The motivation is to have an end product which can easily be worn and taken off without impeding the everyday actions of the user while actively reducing the intensity of their hand tremors. </p>
                     </div>
                     <div id="descOngoingDetails2" style="display: none;">
                         <div class="row flex-md-row-reverse">
@@ -1376,8 +1376,12 @@
                                 <ul class="detailList">
                                     <li>Use Electromyography (EMG) sensors to detect electrical impulses in the users arms.</li>
                                     <li>Have a new user perform tasks which may induce shaking in the hands in order to have training data.<br>
-                                        -EMG sensor data will be saved to a text file which it will use to train its tremor prediction.<br>
-                                        -Additional MicroSD card will be provided to increase operable memory.</li>
+                                        -Sensor data will be saved to an external SD card to reduce on active memory usage. <br>
+                                        -Machine learning algorithm will then be changed based on the collected data to determine when tremor occurs, the intensity of tremor, and the movement of the user.</li>
+                                    <li>Outputs of the algorithm will be able to:<br>
+                                        -Isolate intensity of tremor from noise due to movements.<br>
+                                        -Correlate intensity of tremor with accelerometer data to determine what motor speed is required to mitigate tremor.</li>
+                                    <li>Create testing rig to remove human error; test the effective force produced at a given rpm of flywheel.</li> 
                                     <li><b>More details to be determined as project progresses</b></li>
                                 </ul>
                             </div>
@@ -1386,12 +1390,18 @@
                     <div id="descOngoingMaterials2" style="display: none;">
                         <ul class="detailList">
                             <li>Find necessary components and method of attaching to the arm.<br>
-                                -Current plan is to sew the sensors onto a wearable sleeve.</li>
-                            <li>Figure out response method once tremor is detected.<br>
-                                -Mechanically suppress?<br>
-                                -Electronically suppress by inducing minute shocks to the muscles?</li>
+                                -Arduino Nano 33 BLE Microcontroller was selected for its computational specs and the integrated 9-axis accelerometer/gyrometer/magnetometer.<br>
+                                -Brushless DC motor used alongside a 3D printed flywheel will be used to produce a torque through angular mmomentum.</li>
                             <li>Learn Machine Learning in Python.<br>
-                                -Most likely to start with TensorFlow as it offers flash support on microcontrollers with TensorFlow Lite</li>
+                                -Coding was broken down into three seperate algorithms:<br>
+                                    -Determine if the user is moving their hand / arm. <br>
+                                    -Determine if the user is tremoring by isolating the noise from motions. <br>
+                                    -Calculate the appropriate motor speed required to produce adequate force.</li>
+                            <li>Design a testing rig to obtain accurate mitigation force.<br>
+                                    -Scotch Yoke design was used to produce an oscillatory vertical motion which could be adjusted in terms of frequency and amplitude.<br>
+                                    -Flywheel induced force measured using a protractor and springs.<br>
+                                    -Use of external rig eliminates potential human error and produces more accurate correlation between amplitude and rpm. 
+                            </li>
                         </ul>
                     </div>
                 </div>
