@@ -110,6 +110,16 @@ var projectsComplete = [
 //Function Inputs / Outputs (If applicable)
 //Function Variables (If applicable)
 
+document.addEventListener("DOMContentLoaded", function(){
+    var loader = document.getElementById("preloader");
+    setTimeout(()=> {
+        loader.classList.add("animate");
+    }, 1000);
+    setTimeout(()=> {
+        loader.style.display = "none";
+    }, 2000);
+})
+
 function resetAll(){
     createTable('none');
     document.getElementById("proj5Collapse").classList.remove("animate");
@@ -117,7 +127,6 @@ function resetAll(){
     document.getElementById("courseDrop").src = 'assets/icons/dropDown.png';
     document.getElementById("courseText").innerHTML = "Expand Course Table";
 }
-
 //toTop()
 //Brings user back to top of page via scroll
 function toTop(scrollButton){
