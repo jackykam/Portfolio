@@ -108,18 +108,23 @@ var projectsComplete = [
 //Function Name
 //Function Purpose
 //Function Inputs / Outputs (If applicable)
-//Function Variables (If applicable)
 
+//Window preloader
+//Animates a preloader while window loads content behind it
 document.addEventListener("DOMContentLoaded", function(){
     var loader = document.getElementById("preloader");
+    //First begin fade upwards
     setTimeout(()=> {
         loader.classList.add("animate");
-    }, 1000);
+    }, 3000);
+    //Buffer hiding element until animation completes
     setTimeout(()=> {
         loader.style.display = "none";
-    }, 2000);
+    }, 4000);
 })
 
+//resetAll()
+//Function used to reset states of all pages including dropdowns and hidden elements
 function resetAll(){
     createTable('none');
     document.getElementById("proj5Collapse").classList.remove("animate");
@@ -127,18 +132,24 @@ function resetAll(){
     document.getElementById("courseDrop").src = 'assets/icons/dropDown.png';
     document.getElementById("courseText").innerHTML = "Expand Course Table";
 }
+
 //toTop()
 //Brings user back to top of page via scroll
+//scrollButton: This button is a child to a parent page which we wish to scroll to the top of
 function toTop(scrollButton){
+    //Grab the parent div of the current button
     let div = scrollButton.parentNode;
+    //Scroll to top position
     div.scrollTo({top: 0, behavior: 'smooth'});
 }
+
 //mediaText(text)
 //Shows text on hover in the media section, clear div on hover out
 //text: The text to be shown
 function mediaText(text){
     document.getElementById("mediaText").innerHTML = text;
 }
+
 //menuPage(page)
 //Changes current page shown when user navigates from nav bar
 //page: The page to go show
@@ -152,33 +163,33 @@ function menuPage(page){
     //Show selected page
     document.getElementById(page).style.display="block";
 }
+
 //createTable(sort)
 //Creates and places project squares on the project page
     //Project objects are contained within projectsComplete
     //Items display a brief description on hover, bring to page on click
 //sort: The classifier of project the user is filtering by (all / coding / design/ fabrication / ongoing)
 function createTable(sort){
-    //Apply filter to 'projectsComplete'
+    //Apply 'sort' filter to 'projectsComplete'
     let projects = projectsComplete.filter(project => project.classifiers.includes(sort));
     //Clear table
     document.getElementById("tableContainer").innerHTML="";
     var row = document.getElementById("tableContainer");
     //Begin creation of items, one for each object in 'projects' 
     for (i=0; i < projects.length; i++){
-        console.log(projects[i].title);
-        //Create Project Container, assign 'tableItem' class and make flex row, assign id 'projectContainer' + index
+        //Create Project Container, assign 'tableItem' class and make flex row, assign id 'projectContainer' + (index+!) so we don't start @ 0
         var projectContainer = document.createElement("div");
             projectContainer.className = "tableItem col-xs-12 col-sm-6 col-md-4 col-lg-3";
             (function(index){projectContainer.id="projectContainer" + (index+1)})(i);
-        //Create thumbnail for project
+        //Create thumbnail img for project
         var thumbnail ='url(' + projects[i].thumbnail + ')';
             projectContainer.style.backgroundImage = thumbnail;
-        //Create header for project, assign id 'projectHeader' + index
+        //Create header for project, assign id 'projectHeader' + (index+1)
         var projectHeader = document.createElement("div");
             projectHeader.className ="tableHeader";
             projectHeader.innerHTML = projects[i].title;
             (function(index){projectHeader.id="projectHeader" + (index+1)})(i);
-        //Create description on hover, assign id to the containing div 'projectDesc'
+        //Create description on hover, assign id to the containing div 'projectDesc' + (index+1)
         var projectDesc = document.createElement("div");
             projectDesc.className = "projectDesc";
             //Reinsert the project title
@@ -220,7 +231,7 @@ function createTable(sort){
                     closeAll();
                     document.getElementById("projectPageContainer").style.display="block";
                     document.getElementById(projectPage).style.display = "block";
-                    //Create page item, append button to close page
+                    //Create page item, append a button to close page
                     var page = document.getElementById(projectPage);
                     var closeButton = document.createElement("img");
                         closeButton.src = "assets/icons/menuClose.png";
@@ -230,7 +241,7 @@ function createTable(sort){
                             document.getElementById(projectPage).classList.remove("animate");
                             setTimeout(()=>{closeAll();},400)
                         };
-                        page.appendChild(closeButton);  //Append close button to page item
+                        page.appendChild(closeButton);  //Append close button to 'page'
                     //Buffer pop-up animation until after display set to block
                     setTimeout(()=>{
                         document.getElementById(projectPage).classList.add("animate");
@@ -264,14 +275,14 @@ function createTable(sort){
                     };
                 }
             })(i);
-        //Append project container to main table
-        projectDesc.appendChild(projectDescHeader); //Append secondary header to 'projectDesc'
-        projectDesc.appendChild(projectDescBody);   //Append body text to 'projectDesc'
-        projectDesc.appendChild(projectDescDate);   //Append date text to 'projectDesc'
-        projectDesc.appendChild(projectDescFluff); //Append flavortext to 'projectDesc'
-        projectContainer.appendChild(projectDesc);      //Append 'projectDesc' to 'projectContainer'
-        projectContainer.appendChild(projectHeader); //Append main header to 'projectContainer' 
-        row.prepend(projectContainer);                  //Append 'projectContainer' item to the row, proceed to next item
+        //Append all the created elements to 'projectContainer', and the project container to main table 'row'
+        projectDesc.appendChild(projectDescHeader);   //Append hover description header to 'projectDesc'
+        projectDesc.appendChild(projectDescBody);     //Append hover body text to 'projectDesc'
+        projectDesc.appendChild(projectDescDate);     //Append hover date text to 'projectDesc'
+        projectDesc.appendChild(projectDescFluff);    //Append hover flavortext to 'projectDesc'
+        projectContainer.appendChild(projectDesc);    //Append 'projectDesc' to 'projectContainer'
+        projectContainer.appendChild(projectHeader);  //Append main header to 'projectContainer' 
+        row.prepend(projectContainer);                //Append 'projectContainer' item to the row
     }
     //Create ghost elements to pad space in table
     for (i=0; i<3; i++){
@@ -289,9 +300,11 @@ function createTable(sort){
             },index*50);
         })(k)
     }
+    //Proceed to next item in the filtered list
 }
+
 //closeAll()
-//Closes all project page items
+//Closes all 'projectPage' elements
 function closeAll(){
     for (i=0; i<projectsComplete.length; i++){
         var projectPage = "projectPage" + (i+1);
@@ -301,20 +314,26 @@ function closeAll(){
     document.getElementById("projectPageContainer").style.display="none";
 }
 
+//collapseMe()
+//Expands and collapses various dropdown menus for certain pages 
 function collapseMe(element){
     var current = document.getElementById(element).classList.contains("animate");
     if (current == true){
         document.getElementById(element).classList.remove("animate");
+        //Only relevant in the 'about' page
         document.getElementById("courseDrop").src = 'assets/icons/dropDown.png';
         document.getElementById("courseText").innerHTML = "Expand Course Table";
     }
     else {
         document.getElementById(element).classList.add("animate");
+        //Only relevant in the 'about' page
         document.getElementById("courseDrop").src = 'assets/icons/dropUp.png';
         document.getElementById("courseText").innerHTML = "Collapse Course Table";
     }
 }
 
+//resumeHover()
+//Creates hover effect over the download resume button in the 'contact' page
 function resumeHover(){
     var current = document.getElementById("contactResume").style.color;
     if (current == 'rgb(255, 255, 255)'){
