@@ -528,6 +528,10 @@ button.contactFormBtn:hover{
     background: linear-gradient(to left bottom, rgba(45, 128, 236, 1) 10%, 60%, rgba(58, 209, 255, 1) 90%);
     border: 3px solid rgb(0, 0, 0);
     color: rgb(0, 0, 0);}
+.form-control{
+    border: 2px solid transparent;}
+.form-control:hover{
+    border: 2px solid rgb(136, 253, 152);}
 
 /*Media Query for Tablets (768px)*/ 
 @media screen and (min-width: 768px){
