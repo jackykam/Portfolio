@@ -177,19 +177,19 @@ function createTable(sort){
     var row = document.getElementById("tableContainer");
     //Begin creation of items, one for each object in 'projects' 
     for (i=0; i < projects.length; i++){
-        //Create Project Container, assign 'tableItem' class and make flex row, assign id 'projectContainer' + (index+!) so we don't start @ 0
+        //Create Project Container, assign 'tableItem' class and make flex row, assign id 'projectContainer' + (index) so we don't start @ 0
         var projectContainer = document.createElement("div");
             projectContainer.className = "tableItem col-xs-12 col-sm-6 col-md-4 col-lg-3";
-            (function(index){projectContainer.id="projectContainer" + (index+1)})(i);
+            (function(index){projectContainer.id="projectContainer" + projects[index].page})(i);
         //Create thumbnail img for project
         var thumbnail ='url(' + projects[i].thumbnail + ')';
             projectContainer.style.backgroundImage = thumbnail;
-        //Create header for project, assign id 'projectHeader' + (index+1)
+        //Create header for project, assign id 'projectHeader' + (index)
         var projectHeader = document.createElement("div");
             projectHeader.className ="tableHeader";
             projectHeader.innerHTML = projects[i].title;
-            (function(index){projectHeader.id="projectHeader" + (index+1)})(i);
-        //Create description on hover, assign id to the containing div 'projectDesc' + (index+1)
+            (function(index){projectHeader.id="projectHeader" + projects[index].page})(i);
+        //Create description on hover, assign id to the containing div 'projectDesc' + (index)
         var projectDesc = document.createElement("div");
             projectDesc.className = "projectDesc";
             //Reinsert the project title
@@ -207,19 +207,19 @@ function createTable(sort){
             var projectDescFluff = document.createElement("text");
                 projectDescFluff.className = "projectDescFluff";
                 projectDescFluff.innerHTML = projects[i].buttonText + " >>>";
-            (function(index){projectDesc.id="projectDesc" + (index+1)})(i);
+            (function(index){projectDesc.id="projectDesc" + projects[index].page})(i);
             //Add mouseover event to display description, mouseout to hide description
             (function(index){
                 projectContainer.onmouseover = function(){
-                    var currentDesc = "projectDesc" + (index+1);
+                    var currentDesc = "projectDesc" + projects[index].page;
                         document.getElementById(currentDesc).classList.add("animate");
-                    var currentHeader = "projectHeader" + (index+1);
+                    var currentHeader = "projectHeader" + projects[index].page;
                         document.getElementById(currentHeader).classList.add("animate");
                 }
                 projectContainer.onmouseout = function(){
-                    var currentDesc = "projectDesc" + (index+1);
+                    var currentDesc = "projectDesc" + projects[index].page;
                         document.getElementById(currentDesc).classList.remove("animate");
-                    var currentHeader = "projectHeader" + (index+1);
+                    var currentHeader = "projectHeader" + projects[index].page;
                         document.getElementById(currentHeader).classList.remove("animate");
                 }
             })(i);
@@ -248,7 +248,7 @@ function createTable(sort){
                     },1);
                     //All the page setup goodness
                     //Clear existing tags, fill with project tags
-                    var current = "tagTable" + (index+1);
+                    var current = "tagTable" + projects[index].page;
                     var tableRow = document.getElementById(current);
                         tableRow.innerHTML = "";
                     var tagTitle = document.createElement("text");
@@ -295,7 +295,7 @@ function createTable(sort){
     for(let k=0; k < projects.length; k++){
         (function(index){
             setTimeout(()=>{
-                var currentContainer = "projectContainer" + (projects.length - index);
+                var currentContainer = "projectContainer" + (projects[index].page);
                 document.getElementById(currentContainer).classList.add("animate");
             },index*50);
         })(k)
