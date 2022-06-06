@@ -1,3 +1,35 @@
+/*Use of global style variables*/
+:root{
+    /*Text*/
+    --font_family: "Futura",Trebuchet,Arial,sans-serif;
+    --font_small: 16px;
+    --font_mid: 18px;
+    --font-large: 24px;
+    --font-title: 40px;
+    --font_header: 48px;
+    --letter_spacing_para: 2px;
+    --letter_spacing_header: 8px;
+    /*Colors*/
+    --blue_dark: rgb(45, 176, 252);
+    --blue_gradient: linear-gradient(to left bottom, rgba(45, 128, 236, 0.8) 10%, 60%, rgba(58, 209, 255, 0.8) 90%);
+    --grey_gradient: linear-gradient(to right top, rgba(51, 51, 51, 0.8) 10%, 30%, rgba(0, 0, 0, 0.8) 90%);
+    /*Sizes*/
+    --icon_size: 48px;
+}
+
+.contentContainer, .tableButton, .backToTop, .backToTop:hover, .projectDescHeader,.projectDescFluff, .projectPageTag, 
+.projectPageTitle, .projectPageSummary, .overlay, .projectPageFluff,.FluffButton, .FluffDropdown, .contactFormBtn{
+    color: rgb(255, 255, 255);
+}
+.mainContainer, .mainContainer-bg,.mainContainer-bg-darken,.contentContainer,.tableHeader, .projectDesc, .projectDescHeader, 
+.projectDescBody, .projectDescDate, .projectDescFluff, .projectPageContainer, .closeButton, .overlay{
+    position: absolute;
+}
+.contentHeader, .homeHeaderTitle, .homeBlurb, .mediaText, .tableButtons, .tableItem,.projectPage, .projectPageTags, .projectPageTag,
+.projectPagePicture, .FluffButton, .FluffDropdown, #aboutCourseTable{
+    position: relative;
+}
+
 /*BootStrap NavBar*/
 .navbar {
     background:#535353;}
@@ -15,7 +47,7 @@
 .navbar-collapse {
     justify-content: flex-end;}
 
-    /* Custom Scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 7px;}
 ::-webkit-scrollbar-track {
@@ -33,13 +65,8 @@
     opacity: 1; }
 
 body { 
-    background-image: url('assets/background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: "Futura",Trebuchet,Arial,sans-serif; }
+    background: url('assets/background.jpg') no-repeat fixed center;}
 div.preloader{
-    background-color: rgba(255, 0, 0, 0.5);
     background: #21242d url('https://cssauthor.com/wp-content/uploads/2018/06/Bouncy-Preloader.gif') no-repeat center;
     position: fixed;
     top: 0;
@@ -53,11 +80,7 @@ div.preloader.animate{
     top: -100vh;
     opacity: 0;}
 span.mainContainer{
-    background-image: url('assets/background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    position: absolute;
+    background: url('assets/background.jpg') no-repeat fixed center;
     border-radius: 50px;
     width: 90%;
     left: 0px;
@@ -68,11 +91,7 @@ span.mainContainer{
     padding: 0px;
     overflow-y: auto;}
 div.mainContainer-bg{
-    background-image: url('assets/background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    position: absolute;
+    background: url('assets/background.jpg') no-repeat fixed center;
     width: 100%;
 	height: 100%;
     background-repeat: no-repeat;
@@ -80,27 +99,22 @@ div.mainContainer-bg{
     z-index: 1;}
 div.mainContainer-bg-darken{
     background-color: #000000;
-    position: absolute;
     width: 100%;
 	height: 100%;
     opacity: 0.5;
     z-index: 2;}
 div.contentContainer{
-    position: absolute;
     width: 100%;
     height: 100%;
-    font-size: 40px;
-    color: white;
+    font-size: var(--font-title);
     overflow-x: hidden;
     z-index: 3;}
 div.contentHeader{
-    position: relative;
     margin: 30px 0px;
     min-height: max-content;
-    font-size: 48px;
-    font-weight: bold;
+    font: 700 var(--font_header) var(--font_family);
     text-align: center;
-    letter-spacing: 8px;}
+    letter-spacing: var(--letter_spacing_header);}
 
 /*-----Home Page styles-----*/
 img.homeImage{
@@ -108,20 +122,16 @@ img.homeImage{
 div.homeHeader{
     padding: 0px 0px 0px 40px;}
 p.homeHeaderName{
-    color: rgb(255, 255, 255);
     font-size: 52px;
     font-weight: 700;
     line-height: 0;}
 p.homeHeaderTitle{
-    position: relative;
     top: -10px;
-    color: rgb(199, 199, 199);
-    font-size: 24px;
-    font-weight: 400;
+    color: rgb(200, 200, 200);
+    font: 500 var(--font_mid) var(--font_family);
     line-height: 1;}
 div.homeBlurb{
-    position: relative;
-    border-top: 5px solid white;
+    border-top: 5px solid rgb(255, 255, 255);
     top: 40px;
     left: 0px;
     right: 0px;
@@ -130,16 +140,14 @@ div.homeBlurb{
     height: auto;
     margin: auto;
     padding: 30px 5px 0px 5px;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    font-weight: 500;}
+    font: 500 var(--font_mid) var(--font_family);}
 text.homeBlurbQuote{
     color: rgb(234, 236, 72); 
-    font-weight: bold; 
+    font-weight: 700; 
     text-align: center; 
     transform: scaleY(0);}
 text.projectsLink{
-    color: rgb(45, 176, 252);
+    color: var(--blue_dark);
     text-decoration: underline;
     cursor: pointer;}
 img.mediaIcon{
@@ -148,52 +156,42 @@ img.mediaIcon:hover{
     cursor: pointer;
     transform: translate(0, -5px);}
 div.mediaText{
-    position: relative;
     width: 100%;
-    height: 50px;}
+    height: var(--icon_size);}
 
 /*-----Project Page styles-----*/
 /*Project Main Page*/
 p.projectBlurb{
     width: 100%;
-    padding: 0px 80px;
-    font-size: 18px;
-    letter-spacing: 2px;
+    padding: 0px 50px;
+    font-size: var(--font_mid);
+    letter-spacing: var(--letter_spacing_para);
     text-align: left;}
 div.tableButtons{
-    position: relative;
     padding: 50px 80px 20px 80px;}
 button.tableButton{
-    background: linear-gradient(to left bottom, rgba(45, 128, 236, 0.8) 10%, 60%, rgba(58, 209, 255, 0.8) 90%);
-    border: 1px solid rgba(45, 128, 236, 0.9);
-    color: white;
-    font-size: 26px;
-    font-weight: 600;
+    background: var(--blue_gradient);
+    border: 1px solid var(--blue_dark);
+    font: 700 var(--font-large) var(--font_family);
     transition: all .3s ease-out;}
 button.tableButton:hover{
     background: linear-gradient(to left bottom, rgba(45, 128, 236, 1) 10%, 60%, rgba(58, 209, 255, 1) 90%);
-    color: rgba(231, 231, 231, 1);
+    color: rgb(230, 230, 230);
     transform: translate(0, -5px);}
 button.backToTop{
     background-color: transparent;
     border: 0px solid transparent;
     border-radius: 5px;
     width: 100%;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
+    font: 700 var(--font-title) var(--font_family);
     padding: 20px 0px;
     margin-bottom: 10px;}
 button.backToTop:hover{
-    background-color: rgba(231, 231, 231, 0.2);
-    color: white;}
+    background-color: rgba(231, 231, 231, 0.2);}
 /*Table Items*/
 div.tableItem{
-    background-repeat: no-repeat;
-    background-position: center;
+    background: rgba(0, 0, 0, 0.6) no-repeat center;
     background-size: contain;
-    background-color: rgba(0, 0, 0, 0.6);
-    position: relative;
     min-width: 400px;
     max-width: 400px;
     min-height: 200px;
@@ -209,20 +207,17 @@ div.tableItem.animate{
     transition: 0.7s;}
 div.tableHeader{
     background-color: rgba(43, 43, 43, 0.8);
-    position: absolute;
     min-height: 50px;
     width: 100%;
     height: 50px;
     bottom: 0px;
-    font-size: 25px;
-    font-weight: 800;
+    font: 700 var(--font-large) var(--font_family);
     line-height: 50px;
     opacity: 1;
     transition: opacity 0.5s ease-in-out}
 div.tableHeader.animate{
     opacity: 0;}
 div.projectDesc{
-    position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
     top: 200px;
     width: 100%;
@@ -233,74 +228,61 @@ div.projectDesc.animate{
     transform: translate(0, -200px);
     opacity: 1;}
 text.projectDescHeader{
-    background: linear-gradient(to right top, rgba(51, 51, 51, 0.8) 10%, 30%, rgba(0, 0, 0, 0.8) 90%);
+    background: var(--grey_gradient);
     border-radius: 0px 0px 10px 10px;
-    position: absolute;
     width: 100%;
     left: 0px;
     right: 0px;
     margin: auto;
     padding: 10px 0px 5px 0px;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: white;
+    font: 700 var(--font-large) var(--font_family);
+    letter-spacing: var(--letter_spacing_para);
     transform: scaleY(1.2);}
 text.projectDescBody{
-    position: absolute;
     top: 65px;
     left: 0px;
     right: 0px;
     margin: auto;
     padding: 0px 10px;
-    font-size: 18px;
-    font-weight: 600;}
+    font: 700 var(--font_mid) var(--font_family);}
 text.projectDescDate{
-    position: absolute;
     bottom: 40px;
     left: 0px;
     right: 0px;
     margin: auto;
-    font-size: 20px;
-    font-weight: 700;
+    font: 700 var(--font_mid) var(--font_family);
     transform: scaleY(1.2);}
 text.projectDescFluff{
-    background: linear-gradient(to right top, rgba(51, 51, 51, 0.8) 10%, 30%, rgba(0, 0, 0, 0.8) 90%);
-    border-top: 1px solid white;
-    position: absolute;
+    background: var(--grey_gradient);
+    border-top: 1px solid rgb(255, 255, 255);
     bottom: 5px;
     left: 0px;
     right: 0px;
     margin: auto;
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
+    font: 700 var(--font_mid) var(--font_family);
     text-align: right;
     transform: scaleY(1.2);}
 i.tablePad{
     width: 400px;}
 /*Project Item Page*/
 span.projectPageContainer{
-    position: absolute;
     width: 100%;
     height: 100%;
     z-index: 3;
     display: block;
     overflow-y: hidden;}
 img.closeButton{
-    position: absolute;
     border: 5px solid transparent;
-    border-radius: 48px;
+    border-radius: var(--icon_size);
     top: 20px;
     right: 15px;
-    height: 48px;
-    width: 48px;
+    height: var(--icon_size);
+    width: var(--icon_size);
     z-index: 1;}
 img.closeButton:hover{
     border-color: rgba(255, 255, 255, 0.5);}
 div.projectPage{
     background: linear-gradient(to top, rgba(26, 26, 26, 0.95) 10%, 20%, rgba(0, 0, 0, 0.95) 90%);
-    position: relative;
     border-radius: 50px;
     width: 100%;
     height: 100%;
@@ -313,10 +295,7 @@ div.projectPage.animate{
     top: 0%;
     opacity: 1;}
 div.projectPageBanner{
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    position: relative;
+    background: no-repeat fixed center;
     border-radius: 30px;
     width: 100%;
     overflow: hidden;}
@@ -325,7 +304,6 @@ img.projectPageBanner{
     height: 100%; 
     object-fit: contain;}
 div.projectPageTags{
-    position: relative;
     box-sizing: border-box;
     width: 100%;
     left: 0px;
@@ -341,9 +319,7 @@ text.projectPageTag{
     position: relative;
     padding: 2px 10px;
     margin: 3px 3px;
-    color: white;
-    font-size: 16px;
-    font-weight: 700;
+    font: 700 var(--font_small) var(--font_family);
     letter-spacing: 1px;
     max-width: max-content;
     min-width: min-content;}
@@ -352,17 +328,13 @@ p.projectPageTitle{
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(58, 209, 255, 0.95) 50%, rgb(255, 255, 255, 0));
     border-image-slice: 1;
     margin-top: 20px;
-    color: white;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font: 700 var(--font-title) var(--font_family);
+    letter-spacing: var(--letter_spacing_para);
     text-align: center;}
 p.projectPageSummary{
     margin-top: 20px;
     padding: 0px 70px;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
+    font: 500 20px var(--font_family);
     letter-spacing: 1px;}
 div.projectPagePictures{
     max-width: 1000px;
@@ -372,10 +344,7 @@ div.projectPagePictures{
     padding: 0px;
     margin: auto;}
 div.projectPagePicture{
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: aqua;
+    background: no-repeat center;
     border-radius: 20px;
     margin: 10px;
     padding: 0px;
@@ -384,13 +353,10 @@ div.projectPagePicture{
     overflow: hidden;}
 .overlay {
     background: rgba(0, 0, 0, 0.7);
-    position: absolute; 
     width: 100%;
     bottom: 0;
     padding: 10px; 
-    color: #f1f1f1; 
-    font-size: 16px;
-    font-weight: 500;
+    font: 500 var(--font_small) var(--font_family);
     text-align: center;
     opacity:0;
     transition: .4s ease;}
@@ -400,27 +366,19 @@ p.projectPageFluff{
     width: 100%;
     padding: 0px 70px;
     margin: 0px;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
+    font: 500 20px var(--font_family);
     letter-spacing: 1px;}
 button.FluffButton{
     background-color: transparent;
-    position: relative;
     border: 2px solid grey;
     border-radius: 10px;
     padding: 10px 40px;
     margin: 10px 70px 0px 70px;
-    color: white;
-    font-size: 20px;
-    font-weight: 600;}
+    font: 700 20px var(--font_family);}
 .FluffDropdown{
-    position: relative;
     height: 0px;
     margin: 0px 50px 20px 50px; 
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
+    font: 500 var(--font_mid) var(--font_family);
     letter-spacing: 0.5px;
     transition: all 0.3s ease-in-out;
     opacity: 0;
@@ -430,7 +388,7 @@ button.FluffButton{
     opacity: 1;}
 img.toTopButton{
     position: fixed;
-    border: 3px solid white;
+    border: 3px solid rgb(255, 255, 255);
     border-radius: 10px;
     width: 50px;
     height: 50px;
@@ -448,8 +406,7 @@ div.aboutHeader{
     font-size: 20px;
     align-items: center;}
 div.aboutHeaderPic{
-    background-repeat: no-repeat;
-    background-position: center;
+    background: no-repeat center;
     background-size: contain;
     border-radius: 20px;
     padding: 0px;
@@ -460,49 +417,45 @@ div.aboutHeaderBlurb{
     padding: 20px 30px; 
     min-width: 400px;}
 div.aboutSectionHeader{
-    font-size: 36px;
-    font-weight: bold;
+    font: 700 36px var(--font_family);
     padding: 30px 0px 0px 0px; 
     text-align: center;}
 p.aboutHistoryCard{
-    background: linear-gradient(to top left, rgba(26, 26, 26, 0.8) 10%, rgba(0, 0, 0, 0.8) 80%);
+    background: var(--grey_gradient);
     border-radius: 30px;
     height: 100%;
     padding: 20px;
-    font-size: 16px;
-    font-weight: 500;
+    font: 500 var(--font_small) var(--font_family);
     letter-spacing: 1px;}
 #aboutCourseTable{
-    background: linear-gradient(to top, rgba(39, 39, 39, 0.8) 10%, rgba(20, 20, 20, 0.8) 90%);
-    border-radius: 0px 50px 50px 50px;
-    position: relative; 
+    background: var(--grey_gradient);
+    border-radius: 0px 50px 50px 50px; 
     margin: 0px 70px; 
     padding: 10px 0px;}
 table.courseTable{
     margin: 10px 0px;
-    font-size: 16px;
+    font-size: var(--font_small);
     align-items: center;}
 td{
     border: 10px solid transparent;}
 
 /*-----Content Page styles-----*/
 div.contactContainer{
-    background: linear-gradient(to top left, rgba(26, 26, 26, 0.8) 10%, rgba(0, 0, 0, 0.8) 80%);
+    background: var(--grey_gradient);
     border-radius: 30px;
     margin: 10px;
     overflow: hidden;}
 div.contactDetails{
-    background: linear-gradient(to left bottom, rgba(45, 128, 236, 0.8) 10%, 60%, rgba(58, 209, 255, 0.8) 90%);
+    background: var(--blue_gradient);
     border-radius: 30px;
-    font-size: 24px;}
+    font-size: var(--font-large);}
 div.contactForm{
     background-color: transparent;}
 p.contactDetailsHeader, p.contactFormHeader{
     border-bottom: 6px solid transparent;
     text-align: center;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 3px;
+    font: 700 var(--font-title) var(--font_family);
+    letter-spacing: var(--letter_spacing_para);
     padding-bottom: 20px;
     margin: 30px 0px 0px 0px;}
 p.contactDetailsHeader{
@@ -512,17 +465,15 @@ p.contactFormHeader{
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(58, 209, 255, 0.95) 50%, rgb(255, 255, 255, 0));
     border-image-slice: 1;}
 button.contactFormBtn{
-    background: linear-gradient(to left bottom, rgba(45, 128, 236, 0.8) 10%, 60%, rgba(58, 209, 255, 0.8) 90%);
+    background: var(--blue_gradient);
     border: 3px solid rgb(255, 255, 255);
     border-radius: 10px;
     float: right;
     width: 200px;
     height: 50px;
     margin: 10px 0px;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font: 700 20px var(--font_family);
+    letter-spacing: var(--letter_spacing_para);
     text-align: center;}
 button.contactFormBtn:hover{
     background: linear-gradient(to left bottom, rgba(45, 128, 236, 1) 10%, 60%, rgba(58, 209, 255, 1) 90%);
@@ -551,6 +502,7 @@ button.contactFormBtn:hover{
     div.aboutHeader{padding: 50px 100px 20px 100px;}
     div.aboutHeaderBlurb{min-width: 600px;}
     #aboutCourseTable{padding: 10px 50px;}
+    p.projectBlurb{padding: 0px 300px; font-size: 24px;}
 }
 /*Media Query for Comically big screens (1400px)*/ 
 @media screen and (min-width: 1400px){

@@ -31,7 +31,7 @@ var projectsComplete = [
         thumbnail: "assets/project1-jsgame/thumbnail.png",
         date: "October 2017 - March 2018",
         tags: ["JavaScript", "HTML", "CSS", "PHP", "UI-Design"],
-        desc: "An high-school introduction to JavaScript and webdesign. Character information saved using PHP, UI designed using HTML and CSS",
+        desc: "An high-school introduction to JavaScript and webdesign. Character information saved using PHP, UI designed using HTML and CSS.",
         buttonText: "Assets loading!",
     },
 
@@ -87,7 +87,7 @@ var projectsComplete = [
         thumbnail: "assets/project6-tremorglove/thumbnail.jpg",
         date: "September 2022 - April 2022",
         tags: ["CAD", "SolidWorks", "Metalwork", "Project Management", "Soldering", "Fabrication", "Lathing", "Waterjet Cutting", "Python", "Microcontrollers", "EMG", "Neural Network", "3D-Printing", "Circuitry"],
-        desc: "Third-Year capstone. A glove utilizing gyroscopic stabilization to dampen the effect of tremor in the hands. Machine learning algorithm detects the occurence and intensity of tremor",
+        desc: "Third-Year capstone. A glove utilizing gyroscopic stabilization to dampen the effect of tremor in the hands. Machine learning algorithm detects the occurence and intensity of tremor.",
         buttonText: "A shaky start!",
     },
     //Project 7: Ataksak
@@ -111,17 +111,17 @@ var projectsComplete = [
 
 //Window preloader
 //Animates a preloader while window loads content behind it
-document.addEventListener("DOMContentLoaded", function(){
+/* document.addEventListener("DOMContentLoaded", function(){
     var loader = document.getElementById("preloader");
     //First begin fade upwards
     setTimeout(()=> {
         loader.classList.add("animate");
-    }, 3000);
+    }, 4000);
     //Buffer hiding element until animation completes
     setTimeout(()=> {
         loader.style.display = "none";
-    }, 4000);
-})
+    }, 5000);
+}) */
 
 //resetAll()
 //Function used to reset states of all pages including dropdowns and hidden elements
@@ -253,7 +253,7 @@ function createTable(sort){
                         tableRow.innerHTML = "";
                     var tagTitle = document.createElement("text");
                         tagTitle.innerHTML = "Tags: ";
-                        tagTitle.style = "font-size: 22px; color: white; margin-right: 10px;"
+                        tagTitle.style = "font-size: 22px; color: rgb(255, 255, 255); margin-right: 10px;"
                         tableRow.append(tagTitle);
                     var tagsSorted = projects[index].tags.sort();
                         //Loop through table, append each tag to row
