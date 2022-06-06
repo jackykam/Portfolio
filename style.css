@@ -120,19 +120,19 @@ div.contentHeader{
 img.homeImage{
     max-width: 400px;}
 div.homeHeader{
-    padding: 0px 0px 0px 40px;}
+    padding: 0px 0px 0px 60px;}
 p.homeHeaderName{
     font-size: 52px;
     font-weight: 700;
     line-height: 0;}
 p.homeHeaderTitle{
-    top: -10px;
+    top: -20px;
     color: rgb(200, 200, 200);
-    font: 500 var(--font_mid) var(--font_family);
+    font: 500 20px var(--font_family);
     line-height: 1;}
 div.homeBlurb{
     border-top: 5px solid rgb(255, 255, 255);
-    top: 40px;
+    top: 0px;
     left: 0px;
     right: 0px;
     width: 80%;
@@ -486,9 +486,9 @@ button.contactFormBtn:hover{
 
 /*Media Query for Tablets (768px)*/ 
 @media screen and (min-width: 768px){
-    p.homeHeaderName{font-size: 5vw;}
-    p.homeHeaderTitle{font-size: 3vw;}
-    div.homeBlurb{font-size: 24px;}
+    p.homeHeaderName{font-size: var(--font_header);}
+    p.homeHeaderTitle{font-size: 36px;}
+    div.homeBlurb{font-size: 24px; top: 20px;}
     div.projectHeader{padding: 50px 0px 60px 0px; font-size: 80px;}
     p.projectBlurb{padding: 0px 160px; font-size: 24px;}
     button.tableButton{border-radius: 30px; margin: 5px;}
@@ -496,6 +496,9 @@ button.contactFormBtn:hover{
 }
 /*Media Query for big screens (992px)*/
 @media screen and (min-width: 992px){
+    p.homeHeaderName{font-size: 60px;}
+    p.homeHeaderTitle{font-size: var(--font-title);}
+    div.homeBlurb{top: 40px;}
     span.mainContainer{top: 90px;};
     div.homeHeader{padding-left: 20px;};
     div.projectPage{padding: 20px 100px;};
