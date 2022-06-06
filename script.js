@@ -111,7 +111,7 @@ var projectsComplete = [
 
 //Window preloader
 //Animates a preloader while window loads content behind it
-/* document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function(){
     var loader = document.getElementById("preloader");
     //First begin fade upwards
     setTimeout(()=> {
@@ -121,7 +121,7 @@ var projectsComplete = [
     setTimeout(()=> {
         loader.style.display = "none";
     }, 5000);
-}) */
+})
 
 //resetAll()
 //Function used to reset states of all pages including dropdowns and hidden elements
