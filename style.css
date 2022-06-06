@@ -308,6 +308,7 @@ div.projectPageTags{
     width: 100%;
     left: 0px;
     right: 0px;
+    padding: 0px 30px;
     margin: auto;
     margin-top: 10px;
     display: flex;
@@ -333,8 +334,8 @@ p.projectPageTitle{
     text-align: center;}
 p.projectPageSummary{
     margin-top: 20px;
-    padding: 0px 70px;
-    font: 500 20px var(--font_family);
+    padding: 0px 30px;
+    font: 500 var(--font_small) var(--font_family);
     letter-spacing: 1px;}
 div.projectPagePictures{
     max-width: 1000px;
@@ -404,21 +405,25 @@ img.toTopButton{
 
 /*-----About Page styles-----*/
 div.aboutHeader{
+    position: relative;
+    left: 0px;
+    right: 0px;
     width: 100%;
     padding: 30px 50px 20px 50px;
-    font-size: 20px;
+    margin: auto;
     align-items: center;}
 div.aboutHeaderPic{
     background: no-repeat center;
     background-size: contain;
     border-radius: 20px;
     padding: 0px;
-    min-width: 400px;
+    min-width: 300px;
     max-width: 500px;
     overflow: hidden;}
 div.aboutHeaderBlurb{
     padding: 20px 30px; 
-    min-width: 400px;}
+    min-width: 300px;
+    font: 500 20px var(--font_family)}
 div.aboutSectionHeader{
     font: 700 36px var(--font_family);
     padding: 30px 0px 0px 0px; 
@@ -496,6 +501,8 @@ button.contactFormBtn:hover{
     p.projectBlurb{padding: 0px 160px; font-size: 24px;}
     button.tableButton{border-radius: 30px; margin: 5px;}
     div.aboutSectionHeader{padding: 20px 100px; text-align: left;}
+    p.projectPageSummary{padding: 0px 70px; font: 500 20px var(--font_family);}
+    div.aboutHeaderBlurb{font: 500 var(--font-large) var(--font_family);}
 }
 /*Media Query for big screens (992px)*/
 @media screen and (min-width: 992px){

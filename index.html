@@ -20,7 +20,7 @@
     <script src="script.js"></script>        <!--JS Sheet-->
     <title>Portfolio - Jacky Kam</title>
 </head>
-<body onload="menuPage('homeSpan'), resetAll()"> <!--menuPage('projectSpan'), createTable('none')-->
+<body onload="menuPage('homeSpan'), resetAll()">
     <!--Preloader-->
     <div class="preloader" id="preloader"></div>
     <!--Navigation bar-->
@@ -40,11 +40,7 @@
             </div>
         </div>
     </nav>
-    <script>
-        $("#navbarSupportedContent a:not(.dropdown-toggle)").click(function() {
-            $("#navbarSupportedContent").collapse("hide");
-        });
-    </script>
+
     <!--Home page-->
     <span class="mainContainer" id="homeSpan">
         <!--Creates blur effect-->
@@ -456,30 +452,30 @@
             <!--Beauty screenshot of some dude lookin fly-->
             <div class="aboutHeader row justify-content-center">
                 <div class="aboutHeaderPic col-sm-12 col-md-12 col-lg-5"><img src="assets/IMG_20220407_131554.jpg" style="width: 100%; height: 100%;"></div>
-                <div class="aboutHeaderBlurb col-sm-12 col-md-12 col-lg-7"><text style="font-size: 24px; letter-spacing: 1px;">I am an Integrated Engineering student at the University of British Columbia 
+                <div class="aboutHeaderBlurb col-sm-12 col-md-12 col-lg-7">I am an Integrated Engineering student at the University of British Columbia 
                     with a passion for Mechanical and Computer Engineering. I am currently interested in mechanical /web 
-                    design, product development, manufacturing and mechatronics.</text><br><br>
+                    design, product development, manufacturing and mechatronics.<br><br>
                     Studying aside, I also enjoy video games, guitar, calisthenics, swimming, and meeting new faces!
                 </div>
             </div>
             <!--Some filler stuff about me-->
             <div class="aboutSectionHeader">A Brief History</div>
-                <div class="row justify-content-center" style="padding: 0px 50px;">
-                    <div class="col-sm-12 col-md-12 col-lg-4"><p class="aboutHistoryCard">Since my youth, i've been inquisitive by nature (much to the dismay of my parents), 
-                        taking apart electronics and other gadgets to see how the parts interact and how they could be applied in a different context. I found 
-                        the world of mechanical design, physical modelling, and software to be fascinating, and hopped on any opportunity to learn just 
-                        a little more every day.</p></div>
-                    <div class="col-sm-12 col-md-12 col-lg-4"><p class="aboutHistoryCard">High school was where I hit my stride, being exposed to a plethora of technical 
-                        skills and experiences. Through our info tech courses I was introduced to web design with HTML and JavaScript, while theatre 
-                        production allowed me to experiment with carpentry alongside audio and lighting tech. Lastly our automotive shop was where I 
-                        would learn the ropes of metalwork, welding, and manufacturing tools, alongside vehicle mechanics. Each opportunity more captivating 
-                        than the last, this was what truly cemented my decision to pursue a degree in engineering.</p></div>
-                    <div class="col-sm-12 col-md-12 col-lg-4"><p class="aboutHistoryCard">Moving onto university saw a transition from shop tools and writing simple code in a 
-                        notepad file to CNC, 3D printing, CAD and microcontrollers, yet the wonder and amusement of creating something from scratch remains 
-                        the same. Through student design teams and project courses, I have been able to expand on the various skills built throughout the 
-                        years, and test the knowledge I had gained in unique and applicable ways. The satisfaction of a completed project is almost an 
-                        addiction, and I will continue to pursue more challenging ventures in the future.</p></div>
-                </div>
+            <div class="row justify-content-center" style="padding: 0px 20px;">
+                <div class="col-sm-12 col-md-12 col-lg-4"><p class="aboutHistoryCard">Since my youth, i've been inquisitive by nature (much to the dismay of my parents), 
+                    taking apart electronics and other gadgets to see how the parts interact and how they could be applied in a different context. I found 
+                    the world of mechanical design, physical modelling, and software to be fascinating, and hopped on any opportunity to learn just 
+                    a little more every day.</p></div>
+                <div class="col-sm-12 col-md-12 col-lg-4"><p class="aboutHistoryCard">High school was where I hit my stride, being exposed to a plethora of technical 
+                    skills and experiences. Through our info tech courses I was introduced to web design with HTML and JavaScript, while theatre 
+                    production allowed me to experiment with carpentry alongside audio and lighting tech. Lastly our automotive shop was where I 
+                    would learn the ropes of metalwork, welding, and manufacturing tools, alongside vehicle mechanics. Each opportunity more captivating 
+                    than the last, this was what truly cemented my decision to pursue a degree in engineering.</p></div>
+                <div class="col-sm-12 col-md-12 col-lg-4"><p class="aboutHistoryCard">Moving onto university saw a transition from shop tools and writing simple code in a 
+                    notepad file to CNC, 3D printing, CAD and microcontrollers, yet the wonder and amusement of creating something from scratch remains 
+                    the same. Through student design teams and project courses, I have been able to expand on the various skills built throughout the 
+                    years, and test the knowledge I had gained in unique and applicable ways. The satisfaction of a completed project is almost an 
+                    addiction, and I will continue to pursue more challenging ventures in the future.</p></div>
+            </div>
             <!--Dropdown section to include courses-->
             <div class="aboutSectionHeader">Relevant Courses</div>
             <button class="FluffButton" id="courseTableButton" onclick="collapseMe('aboutCourseTable')"><img style="width: 48px; height: 48px; margin-right: 20px;" id="courseDrop" src="assets/icons/dropDown.png"><text id="courseText">Expand Course Table</button>
