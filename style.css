@@ -438,7 +438,7 @@ p.aboutHistoryCard{
 #aboutCourseTable{
     background: var(--grey_gradient);
     border-radius: 0px 50px 50px 50px; 
-    margin: 0px 70px; 
+    margin: 0px 30px; 
     padding: 10px 0px;}
 table.courseTable{
     margin: 10px 0px;
@@ -514,7 +514,7 @@ button.contactFormBtn:hover{
     div.projectPage{padding: 20px 100px;};
     div.aboutHeader{padding: 50px 100px 20px 100px;}
     div.aboutHeaderBlurb{min-width: 600px;}
-    #aboutCourseTable{padding: 10px 50px;}
+    #aboutCourseTable{padding: 10px 50px; margin: 0px 70px;}
     p.projectBlurb{padding: 0px 300px; font-size: 24px;}
 }
 /*Media Query for Comically big screens (1400px)*/ 
