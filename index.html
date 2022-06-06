@@ -40,7 +40,11 @@
             </div>
         </div>
     </nav>
-
+    <script>
+        $("#navbarSupportedContent a:not(.dropdown-toggle)").click(function() {
+            $("#navbarSupportedContent").collapse("hide");
+        });
+    </script>
     <!--Home page-->
     <span class="mainContainer" id="homeSpan">
         <!--Creates blur effect-->
@@ -596,6 +600,5 @@
             </div>
         </div>
     </span>
-
 </body>
 </html>
