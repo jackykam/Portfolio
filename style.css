@@ -370,13 +370,13 @@ p.projectPageFluff{
     width: 100%;
     padding: 0px 70px;
     margin: 0px;
-    font: 500 20px var(--font_family);
+    font: 500 14px var(--font_family);
     letter-spacing: 1px;}
 button.FluffButton{
     background-color: transparent;
     border: 2px solid grey;
     border-radius: 10px;
-    padding: 10px 40px;
+    padding: 10px 10px;
     margin: 10px 70px 0px 70px;
     font: 700 20px var(--font_family);}
 .FluffDropdown{
@@ -503,6 +503,8 @@ button.contactFormBtn:hover{
     div.aboutSectionHeader{padding: 20px 100px; text-align: left;}
     p.projectPageSummary{padding: 0px 70px; font: 500 20px var(--font_family);}
     div.aboutHeaderBlurb{font: 500 var(--font-large) var(--font_family);}
+    button.FluffButton{padding: 10px 40px;}
+    p.projectPageFluff{font: 500 20px var(--font_family)}
 }
 /*Media Query for big screens (992px)*/
 @media screen and (min-width: 992px){
