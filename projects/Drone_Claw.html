@@ -1,0 +1,256 @@
+<!--Line Following Robot Page-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JackyK Portfolio</title>
+        <link rel="icon" href="../Assets/General/favicon.ico" type="image/x-icon"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="./projectStyle.css">
+        <script defer src="../script.js"></script>
+
+        <style type="text/css">
+            @media screen and (max-width: 1200px){
+                text.sectionTitle{font-size: 24px;}
+                div.sectionText{font-size: 16px;}
+            }
+            @media screen and (max-width: 992px){
+                img.sectionImage{min-width: 240px; max-width: 320px;}
+                #sectionSolution_Ataksak_img2{max-width: 400px;}
+            }
+            @media screen and (max-width: 768px){
+                nav.nav_table{width: 120px;}
+                .nav_table li a{font-size: 12px;}
+                div.mainContainer{margin: 0px 130px 0px 30px;}
+                text.sectionBannerTitle{font-size: 24px;}
+                text.sectionTitle{font-size: 20px; padding: 0px;}
+            }
+            @media screen and (max-width: 576px){
+                nav.nav_table{display: none;}
+                div.mainContainer{margin: 0px 10px 0px 10px;}
+                div.nav_section{padding: 32px 5px 0px 5px;}
+                text.sectionBannerTitle{font-size: 20px;}
+                text.sectionTitle{font-size: 16px; padding: 0px;}
+                text.sectionTitle{font-size: 16px;}
+                div.sectionText{font-size: 12px;}
+                div.footerDiv{padding: 20px 40px;}
+                hr.sectionSeperator{margin: 32px auto 0px auto;}
+                hr.sectionProcessSeperator{margin: 20px auto 10px auto;}
+            }
+        </style>
+    </head>
+    <body onload="scrollPage(0)">
+        <!--Nav bar-->
+        <nav class="navbar navbar-expand-lg fixed-top">
+
+            <div class="container-fluid" style="align-items: center;">
+
+                <text>Jacky Kam Portfolio</text>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbarBurger"><img style="width: 36px;" src="../Assets/General/NavIcons/menuDrop.png"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title navbarBrand" id="offcanvasDarkNavbarLabel">Navigation</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link activeNav" href="../projects.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../contact.html">Contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!--Main Span-->
+        <!--For mainContainer, overview and outro sections are the same across pages, make the middle section different per project?-->
+        <span class="mainSpan_ProjectsPage">
+            <nav class="nav_table">
+                <ul>
+                    <li><a href="#sectionOverview_Ataksak">Overview</a></li>
+                    <li><a href="#sectionSkills_Ataksak">Skills Used</a></li>
+                    <li><a href="#sectionSolution_Ataksak">Solution</a></li>
+                    <li><a href="#sectionProcess_Ataksak">Design Process</a></li>
+                    <li><a href="#sectionClosing_Ataksak">Results</a></li>
+                </ul>
+            </nav>
+            <div class="mainContainer" style="position: relative;">
+                <center>
+                    <div class="sectionBanner"><img class="sectionBannerImg" src="../Assets/Pictures/Project_Ataksak/Thumbnail_Ataksak.jpg"></div>
+                    <text class="sectionBannerTitle">UAV / UGV Drone Claw</text>
+                </center>
+                
+                <!--Overview-->
+                <div class="container nav_section" id="sectionOverview_Ataksak">
+                    <div class="row flex-row-reverse" style="padding-top: 20px;">
+                        <div class="col-lg-5" style="text-align: center; align-content: center;">
+                            <img src="../Assets/Pictures/Project_Ataksak/Overview_Ataksak.jpg" style="width: 100%; max-width: 480px;">
+                        </div>
+                        <div class="sectionText col-lg-7">
+                            <text class="sectionTitle">OVERVIEW</text>
+                            <p style="margin: 0px; padding: 20px 0px;">For the 2021-2022 Aerial Evolution Association of Canada (AEAC) national student conference, the goal of the competition was to locate a parcel of unknown dimensions, land, and safely retrieve the payload to be returned to home base. This was my first year with the UBC UAS team, where I worked as a mechanical designer and integration specialist for their drone &mdash; <b><i>Ataksak</i></b>.</p>
+                            <ul>
+                                <li>By myself, I worked on the design of a package retrieval mechanism making use of linear actuators to clamp and secure a package up to 20x20x20cm.</li>
+                                <li>I also worked with one other student on the manufacturing and assembly of landing gear implementing mecanum drive to improve maneuverability.</li>
+                                <li>Lastly, I worked on the manufacturing and reassembly of the drone after it unceremoniously crashed the night before leaving for competition :<.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="sectionSeperator">
+
+                <!--Skills-->
+                <div class="container nav_section" id="sectionSkills_Ataksak">
+                    <text class="sectionTitle">SKILLS USED</text>
+                    <div class="sectionText">
+                        <text class="skillTag">Actuators</text>
+                        <text class="skillTag">Finite Element Analysis</text>
+                        <text class="skillTag">Laser Cutting</text>
+                        <text class="skillTag">Onshape</text>
+                        <text class="skillTag">Sheet Metal</text>
+                        <text class="skillTag">SolidWorks</text>
+                        <text class="skillTag">Waterjet Cutting</text>
+                        <text class="skillTag">3D-Printing (FDM, SLA)</text>
+                    </div>
+                </div>
+                <hr class="sectionSeperator">
+
+                <!--Solution-->
+                <div class="container nav_section" id="sectionSolution_Ataksak">
+                    <text class="sectionTitle">SOLUTION</text>
+                    <div class="row sectionText">
+                        <div class="col-lg-7" style="align-content: center;">
+                            <ul>
+                                <li>Linear actuators with aluminum jaws with 80N grip force, allowing packages up to 5kg</li>
+                                <li>Adjustable jaw tooling allows for adaptability to various package shapes and sizes</li>
+                                <li>Aluminum brackets secure carbon-tube struts, providing lightweight and stiff landing gear</li>
+                                <li>Mecanum wheels allow full drone maneuverability on the ground including pivoting and diagonals</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-5" style="text-align: center; align-content: center;">
+                            <img src="../Assets/Pictures/Project_Ataksak/Solution_Ataksak.jpg" style="width: 100%; object-fit: contain;" id="sectionSolution_Ataksak_img2">
+                        </div>
+                    </div>
+                </div>
+                <hr class="sectionSeperator">
+
+                <!--Process-->
+                <div class="container nav_section" id="sectionProcess_Ataksak">
+                    <text class="sectionTitle">DESIGN PROCESS</text>
+                    <div class="sectionText">
+                        <div class="row flex-row-reverse">
+                            <div class="sectionText col-lg-8">
+                                <p class="sectionHeading">Claw Modeling</p>
+                                <p style="padding: 10px 0px;">
+                                    The claw underwent a few design iterations making use of scissor jaws, buckets, and clamps. In the end, I settled on a wide jaw which would be retracted closed using 2x 100mm stroke linear actuators. The arms of the jaw were made with mounting holes, allowing the tooling to be swapped out with different shapes and sizes depending on the package being retrieved.
+                                </p>
+                            </div>
+                            <div class="sectionText col-lg-4 flex-column-reverse" style="text-align: center;">
+                                <img src="../Assets/Pictures/Project_Ataksak/Process_Ataksak1.jpg" style="width: 100%; max-width: 400px; object-fit: contain;">
+                            </div>
+                        </div>
+                        <div class="row flex-row-reverse">
+                            <div class="sectionText col-lg-8">
+                                <p class="sectionText">
+                                    This was my first opportunity to work with a 3D printer for rapid prototyping, so I had the opportunity to learn about geometric tolerances, print orientation, and designing with fasteners in mind. Furthermore, my original CAD design was in Onshape, which convinced me to additionally learn SolidWorks as it was more commonly used on the team.
+                                </p>
+                            </div>
+                            <div class="sectionText col-lg-4 flex-column-reverse" style="text-align: center;">
+                                <img src="../Assets/Pictures/Project_Ataksak/Process_Ataksak2.jpg" style="width: 100%; max-width: 320px; object-fit: contain;">
+                            </div>
+                        </div>
+                        <hr class="sectionProcessSeperator">
+
+                        <div class="row flex-row-reverse">
+                            <div class="sectionText col-lg-7">
+                                <p class="sectionHeading">Fabricating Landing Gear</p>
+                                <p style="padding: 10px 0px;">
+                                    Due to the weight of needing 4 motors and mecanum wheels, the struts of the landing gear had to be made from hexagonal carbon-fibre tubing. To address the weakness in shear, the struts were supported by aluminum brackets waterjet cut from ⅛” sheet metal.
+                                </p>
+                            </div>
+                            <div class="sectionText col-lg-5 flex-column-reverse" style="text-align: center; align-content: center;">
+                                <img src="../Assets/Pictures/Project_Ataksak/Process_Ataksak3.jpg" style="width: 100%; max-width: 400px; object-fit: contain;">
+                            </div>
+                        </div>
+                        <div class="row flex-row-reverse">
+                            <div class="sectionText col-lg-7">
+                                <p>
+                                    Here, I learned how to safely handle carbon-fibre materials, as well as setting up .dxf files and operating a waterjet cutter. In total, I manufactured over 80 aluminum parts, and made use of my prior metal-work knowledge to teach other new members how to safely operate in a shop environment and handle metal fabrication tools.
+                                </p>
+                            </div>
+                            <div class="sectionText col-lg-5 flex-column-reverse" style="text-align: center; align-content: center;">
+                                <img src="../Assets/Pictures/Project_Ataksak/Process_Ataksak4.jpg" style="width: 100%; max-width: 320px; object-fit: contain;">
+                            </div>
+                        </div>
+                        <hr class="sectionProcessSeperator">
+
+                        <div class="row">
+                            <div class="sectionText col-lg-12">
+                                <p class="sectionHeading">Drone Reassembly</p>
+                                <p style="padding: 10px 0px;">
+                                    Unfortunately Ataksak crashed during our final test flight, damaging the carbon-fibre hex tubes on the landing gear, and the tubes holding the prop motors. Overnight, I worked on the repair of the drone by cutting new carbon booms, disassembling and reassembling the drone chassis, and resoldering all the connections for power and battery lines.
+                                </p>
+                                <p>
+                                    While an unfortunate event, it gave me the experience of working efficiently and juggling multiple tasks in a significantly time-limited scenario. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="sectionSeperator">
+
+                <!--Results-->
+                <div class="container nav_section" id="sectionClosing_Ataksak" style="padding-bottom: 32px;">
+                    <text class="sectionTitle">RESULTS</text>
+                    <div class="sectionText">
+                        <p>Despite the last minute crash of Ataksak, we managed to successfully complete all test flight missions and compete at competition, though due to radio communication errors, we were unsuccessful at flight whilst on the airfield.</p>
+                        <p>Regardless, this was a great opportunity to expand my knowledge of actuators and electro-mechanical systems, pick up the usage of SolidWorks, and apply more complex manufacturing methods such as the waterjet machine and laser cutter.
+                        </p>
+                    </div>
+
+                    <center>
+                        <img src="../Assets/Pictures/Project_Ataksak/Results_Ataksak1.jpg" style="width: 100%; max-width: 640px;">
+                    </center>
+
+                    <hr class="sectionProcessSeperator">
+
+                    <div class="row">
+                        <div class="sectionText col-lg-6">
+                            <p style="padding: 10px 0px;">
+                                <text class="focusText">Additional note:</text> In 2023, I worked on a quick redesign for the claw in order to drop a football during UBC’s varsity homecoming football game!</p>
+                            </p>
+                        </div>
+                        <div class="sectionText col-lg-6 flex-column-reverse" style="text-align: center; align-content: center;">
+                            <img src="../Assets/Pictures/Project_Ataksak/Results_Ataksak2.jpg" style="width: 100%; max-width: 640px;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footerDiv">
+                Copyright &copy 2024 Jacky Kam<br>
+                Designed and developed with a 12-pack of Red Bull
+            </div>
+        </span>
+    </body>
+</html>

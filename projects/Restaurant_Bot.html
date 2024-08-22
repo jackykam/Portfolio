@@ -1,0 +1,208 @@
+<!--Line Following Robot Page-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JackyK Portfolio</title>
+        <link rel="icon" href="../Assets/General/favicon.ico" type="image/x-icon"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="./projectStyle.css">
+        <script defer src="../script.js"></script>
+
+        <style type="text/css">
+            @media screen and (max-width: 1200px){
+                text.sectionTitle{font-size: 24px;}
+                div.sectionText{font-size: 16px;}
+            }
+            @media screen and (max-width: 992px){
+                img.sectionImage{min-width: 240px; max-width: 320px;}
+            }
+            @media screen and (max-width: 768px){
+                nav.nav_table{width: 120px;}
+                .nav_table li a{font-size: 12px;}
+                div.mainContainer{margin: 0px 130px 0px 30px;}
+                text.sectionBannerTitle{font-size: 24px;}
+                text.sectionTitle{font-size: 20px; padding: 0px;}
+            }
+            @media screen and (max-width: 576px){
+                nav.nav_table{display: none;}
+                div.mainContainer{margin: 0px 10px 0px 10px;}
+                div.nav_section{padding: 32px 5px 0px 5px;}
+                text.sectionBannerTitle{font-size: 20px;}
+                text.sectionTitle{font-size: 16px; padding: 0px;}
+                text.sectionTitle{font-size: 16px;}
+                div.sectionText{font-size: 12px;}
+                div.footerDiv{padding: 20px 40px;}
+                hr.sectionSeperator{margin: 32px auto 0px auto;}
+                hr.sectionProcessSeperator{margin: 20px auto 10px auto;}
+            }
+        </style>
+    </head>
+    <body onload="scrollPage(0)">
+        <!--Nav bar-->
+        <nav class="navbar navbar-expand-lg fixed-top">
+
+            <div class="container-fluid" style="align-items: center;">
+
+                <text>Jacky Kam Portfolio</text>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbarBurger"><img style="width: 36px;" src="../Assets/General/NavIcons/menuDrop.png"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title navbarBrand" id="offcanvasDarkNavbarLabel">Navigation</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link activeNav" href="../projects.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../contact.html">Contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!--Main Span-->
+        <!--For mainContainer, overview and outro sections are the same across pages, make the middle section different per project?-->
+        <span class="mainSpan_ProjectsPage">
+            <nav class="nav_table">
+                <ul>
+                    <li><a href="#sectionOverview_RestaurantBot">Overview</a></li>
+                    <li><a href="#sectionSkills_RestaurantBot">Skills Used</a></li>
+                    <li><a href="#sectionProcess_RestaurantBot">Design Process</a></li>
+                    <li><a href="#sectionResults_RestaurantBot">Results</a></li>
+                </ul>
+            </nav>
+            <div class="mainContainer" style="position: relative;">
+                <center>
+                    <div class="sectionBanner"><img class="sectionBannerImg" src="../Assets/Pictures/Project_ARM/Thumbnail_ARM.jpg"></div>
+                    <text class="sectionBannerTitle">Restaurant Robot Design</text>
+                </center>
+                
+                <!--Overview-->
+                <div class="container nav_section" id="sectionOverview_RestaurantBot">
+                    <div class="row">
+                        <div class="sectionText col-xl-8">
+                            <text class="sectionTitle">OVERVIEW</text>
+                            <p style="margin: 0px; padding: 20px 0px;">In 2023, the UBC Design League held a designathon competition with the prompt of assisting restaurant services through automation. University teams of 3-5 members were given 24 hours to brainstorm and design their proposed solution, with the final deliverables being a fully detailed CAD model and professional presentation pitch.
+                            </p>
+                            <ul>
+                                <li>As a team, we all collaborated on the ideation section and speccing of bot components.</li>
+                                <li>On my own, I worked on the electronics speccing and CAD model of a tray delivery mechanism.</li>
+                            </ul>
+                            <center><a href="https://docs.google.com/presentation/d/1MlJkNOwguzLJ2ayL0z0mrXLhpEExvr_AjpkQ84zApj8/edit?usp=drive_link" target="_blank" style="color: var(--main_accent)"><p class="linkText"><b>Our Final Presentation</b></p></a></center>
+                        </div>
+                        <div class="col-xl-4" style="text-align: center;">
+                            <img class="sectionImage" src="../Assets/Pictures/Project_ARM/Overview_ARM.png" style="width: 100%; max-width: 400px; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+                <hr class="sectionSeperator">
+
+                <!--Skills-->
+                <div class="container nav_section" id="sectionSkills_RestaurantBot">
+                    <text class="sectionTitle">SKILLS USED</text>
+                    <div class="sectionText">
+                        <text class="skillTag">Competition</text>
+                        <text class="skillTag">Presentation</text>
+                        <text class="skillTag">Product Design</text>
+                        <text class="skillTag">SolidWorks</text>
+                        <text class="skillTag">Surface Modeling</text>
+                    </div>
+                </div>
+                <hr class="sectionSeperator">
+
+                <!--Process-->
+                <div class="container nav_section" id="sectionProcess_RestaurantBot">
+                    <text class="sectionTitle">DESIGN PROCESS</text>
+                    <div class="row">
+                        <div class="sectionText col-lg-7">
+                            <p class="sectionHeading">Ideation:</p>
+                            <p>
+                                Our team prioritized an idea which could be realistically implemented concerning material choice, manufacturability, and stress conditions. We researched current market available products, what they offered, what they were missing, and how we might be able to improve on them. Most notable was the verticality of current designs, with a majority of them requiring patrons to reach for their trays.
+                            </p>
+                        </div>
+                        <div class="sectionText col-lg-5" style="text-align: center; align-content: center;">
+                            <img src="../Assets/Pictures/Project_ARM/Process_ARM1.jpg" style="width: 100%; max-width: 480px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="sectionText col-lg-12">
+                            <p>
+                                Our designs aimed to circumvent this by designing a robot which added trays horizontally, lowering the center of mass, while also having a means of raising the food up and onto the tables of the patrons. We experimented with multiple iterations using scissor lifts, belts, pulleys, and carousels, ultimately settling on a lead screw design similar to 3D printer beds.
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="sectionProcessSeperator">
+
+                    <div class="row flex-row-reverse">
+                        <div class="sectionText col-lg-7">
+                            <p class="sectionHeading">Delivery System:</p>
+                            <p>
+                                In order to compact the delivery mechanism to vertical movement, I designed the elevation and tray delivery system around 2x lead screws, with 4 guiding rods. The framing was made of aluminum L-brackets, which could easily be cut to length and bolted in place.
+                            </p>
+                            <p>
+                                Each pair of trays would be raised sequentially to table height, where a secondary motor would push the trays out for customer retrieval. This layer of trays would then be retracted, and the next layer would be raised to repeat the process.
+                            </p>
+                        </div>
+
+                        <div class="sectionText col-lg-5" style="text-align: center; align-content: center;">
+                            <img src="../Assets/Pictures/Project_ARM/Process_ARM2.jpg" style="width: 100%; max-width: 400px; object-fit: contain;">
+                        </div>
+                    </div>
+                    <hr class="sectionProcessSeperator">
+
+                    <div class="row">
+                        <div class="sectionText col-lg-7">
+                            <p class="sectionHeading">CAD Modeling:</p>
+                            <p>
+                                Our proposed design was modeled in SolidWorks making use of sheet metal tools to create the delivery system and framing, while surface modeling was employed for the trays themselves and the aesthetic shell. Electronics and fasteners were specced according to load scenarios, and STL models taken from McMaster Carr.
+                            <p>
+                                After completing the structural design, materials were assigned, with load bearing components being stainless steel, framing being aluminum, and HDPE plastics to ensure food-safe compatibility. Finally, the framing underwent FEA for deflection analysis
+                            </p>
+                        </div>
+
+                        <div class="sectionText col-lg-5" style="text-align: center; align-content: center;">
+                            <img src="../Assets/Pictures/Project_ARM/Process_ARM3.jpg" style="width: 100%; max-width: 400px; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+                <hr class="sectionSeperator">
+
+                <!--Results-->
+                <div class="container nav_section" id="sectionResults_RestaurantBot" style="padding-bottom: 32px;">
+                    <text class="sectionTitle">RESULTS</text>
+                    <div class="sectionText">
+                        <p>After an exhausting 24 hours, our team delivered a strong presentation to wrap up the competition weekend, explaining our ideation process and the inner workings behind the design decisions and mechanisms of choice. Our team was acknowledged for the most functional product of all those presented, with emphasis on the attention to detail.</p>
+                        <p>In the end, this was a gratifying (and exhausting) opportunity to work through designing a product in a team environment under limited time. It was a great exercise of communication, getting ideas done quickly, and split-second decision making.
+                        </p>
+                    </div>
+                    <center><img src="../Assets/Pictures/Project_ARM/Results_ARM.jpg" style="width: 100%; max-width: 640px;"></center>
+                </div>
+            </div>
+            <div class="footerDiv">
+                Copyright &copy 2024 Jacky Kam<br>
+                Designed and developed with a 12-pack of Red Bull
+            </div>
+        </span>
+    </body>
+</html>

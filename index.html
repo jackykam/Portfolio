@@ -1,0 +1,218 @@
+<!--Landing Page / Home-->
+<!--Brief summary type things, introduce navigation and maybe a carousel of projects-->
+<!--Add links to socials here-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JackyK Portfolio</title>
+        <link rel="icon" href="./Assets/General/favicon.ico" type="image/x-icon"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./style.css">
+        <script defer src="./script.js"></script>
+
+        <style type="text/css">
+            @media screen and (max-width: 992px){
+                span.titleSpan{margin: auto 5vh; padding: 15px;}
+            }
+            @media screen and (max-width: 576px){
+                text.titleText{font-size: 32px;}
+                text.titleFluffText{font-size: 16px;}
+                text.titleButton{font-size: 16px;}
+                span.mainSpan{font-size: var(--font_small)}
+                div.footerDiv{padding: 20px 40px;}
+                table.homeSocialTable{font-size: 16px;}
+            }
+        </style>
+    </head>
+    <body onload="scrollPage(0)">
+        <!--Nav bar-->
+        <nav class="navbar navbar-expand-lg fixed-top">
+
+            <div class="container-fluid" style="align-items: center;">
+
+                <text>Jacky Kam Portfolio</text>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbarBurger"><img style="width: 36px;" src="./Assets/General/NavIcons/menuDrop.png"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title navbarBrand" id="offcanvasDarkNavbarLabel">Navigation</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link activeNav" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./projects.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">Contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!--The fancy first page ig-->
+        <span class="titleSpan row">
+
+            <div class="col-xl-6" style="padding: 20px 0px 20px 20px">
+                <text class="titleText">Jacky Kam</text>
+                <hr style="border: 1px solid var(--main_accent); width: 100%; left: 0px; right: 0px; margin: 10px auto 20px auto; opacity: 1;">
+    
+                <text class="titleFluffText">UBC Integrated Engineering Graduate &nbsp( Mechanical | Material | Electrical ) <br><br> Mechanical Designer, Tinkerer, and Dark Elf Monk in DnD 5e</text><br><br><br>
+    
+                <!--Jumps 100%vh-->
+                <center>
+                    <text class="titleButton" onclick="scrollPage(100)">see more...</text>
+                </center>
+            </div>
+
+            <div class="col-xl-6" style="text-align: center; align-content: center; justify-content: center;">
+                <div id="homeCarousel" class="carousel slide homeCarousel" data-bs-ride="carousel">
+                              
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner" style="left: 0px; right: 0px; margin: auto; border-radius: 12px;">
+
+                        <a href="./projects/Haptic_Glove.html">
+                            <div class="carousel-item active" data-bs-interval="4000">
+                                <img src="./Assets/Pictures/Project_HapticGlove/Thumbnail_HapticGlove.jpg" alt="Haptic Controller Glove" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block carouselText">
+                                    <h5>Haptic Controller Glove</h5>
+                                    <p>A 2-in-1 haptic glove to control a custom End-of-Arm-Tool for manipulating objects from a distance</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="./projects/Air_Taxi.html">
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="./Assets/Pictures/Project_AirTaxi/Thumbnail_AirTaxi.jpg" alt="Carbon-Fibre Barbie Cabin" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block carouselText">
+                                    <h5>Carbon-Fibre Barbie Cabin</h5>
+                                    <p>Mixing mechatronics and aesthetics for a scaled-down transport system using a CF semi-monocoque</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="./projects/Drone_Claw.html">
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="./Assets/Pictures/Project_Ataksak/Thumbnail_Ataksak.jpg" alt="Drone Package Retrieval System" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block carouselText">
+                                    <h5>Drone Package Retrieval System</h5>
+                                    <p>Actuator based claw for transporting packages, and assembly of mecanum-drive landing gear</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                  
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev" style="width: fit-content; padding: 0px 10px;">
+                      <span class="carousel-control-prev-icon carouselIcon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next" style="width: fit-content; padding: 0px 10px;">
+                      <span class="carousel-control-next-icon carouselIcon"></span>
+                    </button>
+
+                </div>
+            </div>
+        </span>
+
+        <!--Make this flex. Have pic, intro, link to projects, socials-->
+        <span class="mainSpan">
+
+            <!--First section for About Me type stuff-->
+            <div class="homeSection1">
+                <div class="container">
+                    <div class="row">
+    
+                      <div class="col-lg-7" style="padding-top: 30px;">
+                        <div class="homeBlurb" style="align-content: start;">
+    
+                            <text style="font-size: 36px;">Heya!</text><br><br>
+                            <p>I am an Integrated Engineering graduate from the University of British Columbia. The combination of my degree, the unique capstone opportunities given to IGENs, and my own personal interests have given me a skillset to tackle complex tasks, and thrive in a multi-disciplinary environment.</p>
+    
+                            <hr style="border: 1px solid var(--main_accent); left: 0px; right: 0px; margin: 30px auto 30px auto; opacity: 1;">
+    
+                            <p>My drive for engineering, like many, stemmed from the enjoyment of taking things apart. However, much to my dismay, an issue arose when it meant putting things back together. From this i've developed a knack for tinkering, experimenting, and breaking things in a (somewhat) methodical manner.</p>
+    
+                            <p>When not grinding IRL skillpoints to reinvest into my technical repertoire, I enjoy bouldering, swimming, video games, and working on silly little projects.</p>
+    
+    
+                        </div>
+                      </div>
+    
+                      <div class="col-lg-5" style="text-align: center; align-content: center; padding-top: 30px;">
+                        <img class="homeImage" src="./Assets/General/Home/selfie.jpg">
+                      </div>
+    
+                    </div>
+                </div>
+            </div>
+
+            <!--Second section for navigation to Projects and Contact info-->
+            <div class="homeSection2">
+                <div class="container">
+                    <div class="row">
+    
+                        <div class="col-lg-7" style="padding-top: 30px; text-align: center; align-content: center;">
+                            <img src="./Assets/General/Home/homeProject.png" style="width: 100%; max-width: 500px; object-fit: contain;">
+                            <p style="margin: 20px 40px 30px 40px;">Check out some of my <a class="linkText" href="./projects.html">projects</a> to get a gauge on my style, or feel free to <a class="linkText" href="./contact.html">contact</a> me and say hi!</p>
+                        </div>
+
+                        <div class="col-lg-5" style="padding: 30px 0px 30px 20px; align-content: center; max-width: fit-content;">
+                            <center>
+                                <p class="resumeLink" onclick="window.open('./Assets/General/Home/JackyKam_Resume2024.pdf')">
+                                    Download Resume
+                                    <img class="projectIcon" >
+                                </p>
+                            </center>
+
+                            <hr style="border: 1px solid var(--main_accent); left: 0px; right: 0px; margin: 30px auto 30px auto; opacity: 1;">
+                            <table class="homeSocialTable">
+                                <tr class="homeSocialTableRow">
+                                    <td class="homeSocialTableCell"><img class="homeSocialIcon" src="./Assets/General/Home/iconPhone.png"></td>
+                                    <td class="homeSocialTableCell" style="padding-left: 5px; cursor:not-allowed;">+1(604)-716-7227</td>
+                                </tr>
+                                <tr class="homeSocialTableRow" onclick="javascript: window.location.href='mailto:jkam923@gmail.com';">
+                                    <td class="homeSocialTableCell"><img class="homeSocialIcon" src="./Assets/General/Home/iconMail.png"></td>
+                                    <td class="homeSocialTableCell" style="padding-left: 10px;">jkam923@gmail.com</td>
+                                </tr>
+                                <tr class="homeSocialTableRow" onclick="window.open('https://www.linkedin.com/in/jacky-kam/', '_newtab')">
+                                    <td class="homeSocialTableCell"><img class="homeSocialIcon" src="./Assets/General/Home/iconLinkedIn.png"></td>
+                                    <td class="homeSocialTableCell" style="padding-left: 10px;">linkedin.com/in/jacky-kam/</td>
+                                </tr>
+                                <tr class="homeSocialTableRow" onclick="window.open('https://github.com/jackykam', '_newtab')">
+                                    <td class="homeSocialTableCell"><img class="homeSocialIcon" src="./Assets/General/Home/iconGithub.png"></td>
+                                    <td class="homeSocialTableCell" style="padding-left: 10px;">github.com/jackykam</td>
+                                </tr>
+                                <tr class="homeSocialTableRow" onclick="window.open('https://www.youtube.com/@ttw3666', '_newtab')">
+                                    <td class="homeSocialTableCell"><img class="homeSocialIcon" src="./Assets/General/Home/iconYoutube.png"></td>
+                                    <td class="homeSocialTableCell" style="padding-left: 10px;">youtube.com/@ttw3666</td>
+                                </tr>
+                            </table>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="footerDiv">
+                Copyright &copy 2024 Jacky Kam<br>
+                Designed and developed with a 12-pack of Red Bull
+            </div>
+        </span>
+    </body>
+</html>

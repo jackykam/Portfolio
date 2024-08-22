@@ -1,0 +1,128 @@
+span.mainSpan_ProjectsPage{
+    position: absolute;
+    background-color: rgba(33,33,33,0.4);
+    backdrop-filter: blur(16px);
+    width: 100%;
+}
+img {
+    border-radius: 10px;
+}
+/* ----- ToC Element ----- */
+nav.nav_table{
+    position: sticky;
+    float: right;
+    top: 100px;
+    width: 200px;
+    padding: 0px 20px 0px 20px;
+    border: 2px solid rgb(143, 143, 143);
+    border-width: 0px 0px 0px 2px;
+    overflow: visible;}
+.nav_table ul, .nav_table li{
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;}
+.nav_table li a{
+    color: var(--main_accent);
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 50ms ease-in-out;
+    text-wrap: nowrap;}
+.nav_table li{
+    margin: 5px 0px;}
+.nav_table li a:hover{
+    color: var(--secondary_accent);}
+.nav_table li.active > a {
+    color: var(--main_light);
+    font-weight: 700;}
+
+/*----- Body Type Elements -----*/
+div.mainContainer{
+    margin: 0px 210px 0px 60px;}
+div.nav_section{
+    position: relative;
+    padding: 64px 10px 0px 20px;}
+div.nav_section li{
+    padding: 5px 0px;}
+hr.sectionSeperator{
+    border: 1px solid var(--main_accent);
+    width: 50vw;
+    margin: 64px auto 0px auto;
+    opacity: 1;}
+text.sectionTitle{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px 0px; }
+div.sectionText, p.sectionText{
+    font-size: 20px;
+    padding-top: 10px;
+    align-content: center;}
+
+/* Banner Picture Stuff*/
+div.sectionBanner{
+    border-radius: 10px;
+    margin-top: calc(64px + 1vh);
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;}
+img.sectionBannerImg{
+    width: 100%;}
+text.sectionBannerTitle{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--main_accent);
+    letter-spacing: 1px;}
+
+/* Section Overview*/
+img.sectionImage{
+    width: 100%;
+    min-width: 320px;
+    max-width: 480px;
+    overflow: hidden;
+}
+
+/* Section Skills */
+text.skillTag{
+    background: linear-gradient(to top, rgb(57, 150, 80) 20%, 60%, rgb(36, 255, 83));
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    text-wrap: nowrap;
+    display: inline-block;
+}
+
+/* Section Solution */
+img.sectionSolutionLogo{
+    width: 10vw;
+    max-width: 100px;
+}
+
+/* Section Process */
+hr.sectionProcessSeperator{
+    border: 1px solid var(--secondary_light);
+    width: 50vw;
+    margin: 40px auto 30px auto;
+    opacity: 0.4;
+}
+p.sectionheading, text.focusText{
+    margin: 0px; 
+    padding: 20px 0px;
+    color: var(--secondary_accent);
+    font-weight: 700;
+}
+
+
+#sectionProgress_Cosplay_img4{
+    max-width: 500px;
+}
+#sectionProcess_HapticGlove_img3, #sectionProcess_HapticGlove_img5, #sectionOverview_Winch_img, #sectionSolution_Winch_img, #sectionSolution_Ataksak_img2{
+    max-width: 480px;
+}
+#sectionProcess_Winch_img1, #sectionProcess_Winch_img2, #sectionProcess_Winch_img3, #sectionProcess_Shield_img1, #sectionProcess_Shield_img2{
+    max-width: 400px;
+}
+#sectionOverview_Shield_img, #sectionProcess_Shield_img3, #sectionProcess_Shield_img4{
+    max-width: 320px;
+}

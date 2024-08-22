@@ -1,0 +1,168 @@
+<!--Line Following Robot Page-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JackyK Portfolio</title>
+        <link rel="icon" href="../Assets/General/favicon.ico" type="image/x-icon"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="./projectStyle.css">
+        <script defer src="../script.js"></script>
+
+        <style type="text/css">
+            @media screen and (max-width: 1200px){
+                text.sectionTitle{font-size: 24px;}
+                div.sectionText{font-size: 16px;}
+            }
+            @media screen and (max-width: 992px){
+                img.sectionImage{min-width: 240px; max-width: 320px;}
+            }
+            @media screen and (max-width: 768px){
+                nav.nav_table{width: 120px;}
+                .nav_table li a{font-size: 12px;}
+                div.mainContainer{margin: 0px 130px 0px 30px;}
+                text.sectionBannerTitle{font-size: 24px;}
+                text.sectionTitle{font-size: 20px; padding: 0px;}
+            }
+            @media screen and (max-width: 576px){
+                nav.nav_table{display: none;}
+                div.mainContainer{margin: 0px 10px 0px 10px;}
+                div.nav_section{padding: 32px 5px 0px 5px;}
+                text.sectionBannerTitle{font-size: 20px;}
+                text.sectionTitle{font-size: 16px; padding: 0px;}
+                text.sectionTitle{font-size: 16px;}
+                div.sectionText{font-size: 12px;}
+                div.footerDiv{padding: 20px 40px;}
+                hr.sectionSeperator{margin: 32px auto 0px auto;}
+                hr.sectionProcessSeperator{margin: 20px auto 10px auto;}
+            }
+        </style>
+    </head>
+    <body onload="scrollPage(0)">
+        <!--Nav bar-->
+        <nav class="navbar navbar-expand-lg fixed-top">
+
+            <div class="container-fluid" style="align-items: center;">
+
+                <text>Jacky Kam Portfolio</text>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbarBurger"><img style="width: 36px;" src="../Assets/General/NavIcons/menuDrop.png"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title navbarBrand" id="offcanvasDarkNavbarLabel">Navigation</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link activeNav" href="../projects.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../contact.html">Contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!--Main Span-->
+        <!--For mainContainer, overview and outro sections are the same across pages, make the middle section different per project?-->
+        <span class="mainSpan_ProjectsPage">
+            <nav class="nav_table">
+                <ul>
+                    <li><a href="#sectionOverview_Keychain">Overview</a></li>
+                    <li><a href="#sectionSkills_Keychain">Skills Used</a></li>
+                    <li><a href="#sectionProcess_Keychain">Design Process</a></li>
+                    <li><a href="#sectionResults_Keychain">Results</a></li>
+                </ul>
+            </nav>
+            <div class="mainContainer" style="position: relative;">
+                <center>
+                    <div class="sectionBanner"><img class="sectionBannerImg" src="../Assets/Pictures/Project_CADKeychain/Thumbnail_CADKeychain.jpg"></div>
+                    <text class="sectionBannerTitle">CAD Keychain</text>
+                </center>
+                
+                <!--Overview-->
+                <div class="container nav_section" id="sectionOverview_Keychain">
+                    <div class="row flex-row-reverse" style="padding-top: 20px;">
+                        <div class="sectionText col-lg-7">
+                            <text class="sectionTitle">OVERVIEW</text>
+                            <p style="margin: 0px; padding: 20px 0px;">In our first year engineering studies, our introduction to Computer Aided Design (CAD) was a competition among first-year engineering students to design a small keychain. I designed a rectangular fidget toy in Onshape, which comprised of two clamshell halves housing rotatable gears.</p>
+                        </div>
+                        <div class="col-lg-5" style="text-align: center;">
+                            <img src="../Assets/Pictures/Project_CADKeychain/Overview_CADKeychain.jpg" style="width: 100%; max-width: 320px; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+                <hr class="sectionSeperator">
+
+                <!--Skills-->
+                <div class="container nav_section" id="sectionSkills_Keychain">
+                    <text class="sectionTitle">SKILLS USED</text>
+                    <div class="sectionText">
+                        <text class="skillTag">Onshape</text>
+                        <text class="skillTag">3D-Printing (FDM, SLA)</text>
+                    </div>
+                </div>
+                <hr class="sectionSeperator">
+
+                <!--Process-->
+                <div class="container nav_section" id="sectionProcess_Keychain">
+                    <text class="sectionTitle">DESIGN PROCESS</text>
+                    <div class="sectionText">
+                        <div class="row">
+                            <div class="sectionText col-lg-7">
+                                <p class="sectionHeading">Modeling</p>
+                                <p>
+                                    This was my first experience designing a printable part in a proper CAD program, and required that I learn the conventions of proper design etiquette.
+                                    <ul>
+                                        <li>Designing for manufacturing meant considering the orientation each component could be printed in, ensuring there were no infeasible geometries or overhangs. </li>
+                                        <li>Designing for assembly meant adding locating features for alignment and sufficient spacing for movement. </li>
+                                        <li>Finally, understanding the material from for the part (ABS plastic) determined the thicknesses and allowable tolerances of the parts.</li>
+                                    </ul>
+                                </p>
+                            </div>
+
+                            <div class="sectionText col-lg-5">
+                                <img src="../Assets/Pictures/Project_CADKeychain/Process_CADKeychain.png" style="width: 100%; object-fit: contain;">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr class="sectionSeperator">
+
+                <!--Results-->
+                <div class="container nav_section" id="sectionResults_Keychain" style="padding-bottom: 32px;">
+                    <text class="sectionTitle">RESULTS</text>
+                    <div class="sectionText">
+                        <p>
+                            The competition winners were determined via voting among all first year engineering students. To my surprise, my model was voted for top 10 designs amongst my 1000+ peers.
+                        </p>
+                    </div>
+                    <center><img src="../Assets/Pictures/Project_CADKeychain/Results_CADKeychain.jpg" style="width: 100%; max-width: 640px;"></center>
+                </div>
+            </div>
+            <div class="footerDiv">
+                Copyright &copy 2024 Jacky Kam<br>
+                Designed and developed with a 12-pack of Red Bull
+            </div>
+        </span>
+    </body>
+</html>

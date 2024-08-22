@@ -1,0 +1,432 @@
+/* ----- Root for consistent styles ----- */
+:root{
+    /*Text*/
+    --font_small: 12px;
+    --font_normal: 18px;
+    --font_link: 20px;
+    /*Colors*/
+    --main_dark: rgb(0, 0, 0);
+    --secondary_dark: rgb(17, 17, 17);
+    --tertiary_dark: rgb(54, 54, 54);
+    --main_middark: rgb(70, 70, 70);
+    --main_light: rgba(255, 255, 255, 1);
+    --secondary_light: rgb(180, 180, 180);
+    --main_accent: rgb(10, 228, 65);
+    --secondary_accent: rgb(93, 255, 128);
+    /*Sizes*/
+    --icon_size: 40px;
+}
+
+/* ----- Body Type Elements ----- */
+html {
+    scrollbar-color: var(--secondary_accent) var(--tertiary_dark);
+    scrollbar-width: thin;}
+body{
+    background: url('Assets/General/blackground.jpg') no-repeat fixed center;
+    font-family: Tahoma, sans-serif;
+    color: white;}
+
+/* Navbar styles */
+.navbar{
+    background: rgba(0, 0, 0, 0.7);
+    height: 64px;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    align-content: center;}
+.navbarBrand{
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;}
+.navbarBrand:hover{
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;}
+a.nav-link{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--secondary_light);
+    border: 3px solid var(--main_accent);
+    border-radius: 10px;
+    margin: 5px 1px 5px 1px;
+    text-align: center;}
+a.activeNav{
+    border: 3px solid var(--main_light);
+    border-radius: 10px;
+    color: var(--main_light);}
+a.nav-link:hover{
+    color: var(--main_light);}
+
+
+
+/* ----- Home Page Elements ----- */
+span.titleSpan{
+    position: absolute;
+    background: rgba(17, 17, 17, 0.5);
+    top: 0px; bottom: 0px; left: 0px; right: 0px;
+    height: fit-content;
+    margin: auto 20vh;
+    padding: 100px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);}
+span.mainSpan{
+    position: absolute;
+    top: calc(100% + 64px);
+    width: 100%;
+    left:0px; right: 0px;
+    margin: auto;
+    backdrop-filter: blur(20px);
+    font-size: var(--font_normal);}
+
+div.homeSection1{
+    background-color: rgba(17, 17, 17, 0.2);
+    width: 100%;
+    padding-bottom: 30px;
+    backdrop-filter: blur(10px);}
+div.homeSection2{
+    background-color: rgba(70, 70, 70, 0.15);
+    width: 100%;
+    padding-bottom: 30px;
+    backdrop-filter: blur(10px);}
+div.footerDiv{
+    background-color: rgba(17, 17, 17, 0.2);
+    width: 100%;
+    padding: 20px 120px;
+    backdrop-filter: blur(10px);
+    font-size: 16px;
+    font-family: sans-serif;}
+
+/* Stuff in the banner */
+text.titleText{
+    font-size: 60px; 
+    font-style: oblique; 
+    font-weight: 700;}
+text.titleFluffText{
+    color: rgb(212, 212, 212);
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: 700;}
+text.titleButton{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;}
+text.titleButton:hover{
+    border: 2px solid var(--secondary_light);
+    color:var(--secondary_light);
+    cursor: pointer;}
+
+/* Picture in the About Me*/
+img.homeImage{
+    border-radius: 12px;
+    width: fit-content;
+    max-height: 400px;
+    object-fit: contain;}
+
+/* Contact Me section img carousel */
+div.homeCarousel{
+    width: 90%;
+    left: 0px; right: 0px; 
+    margin: auto;
+    aspect-ratio: 16/9;}
+.carousel-caption{
+    bottom: 0px;}
+.carousel-item:hover .carouselText{opacity: 1;}
+.carouselText{
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 30px 0px 30px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transition-property: opacity;}
+p.resumeLink{
+    width: fit-content;
+    color: white;
+    text-align: center; 
+    font-size: 24px; 
+    font-weight: bold; }
+p.resumeLink:hover{
+    color: var(--secondary_accent);
+    cursor: pointer;}
+.carouselIcon{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px 0px;
+}
+    
+/*Dunno why the icons came in 2 sizes*/
+table.homeSocialTable{
+    font-size: var(--font_link);
+    font-weight: 600;}
+tr.homeSocialTableRow{
+    height: 48px;
+    align-content: center;}
+td.homeSocialTableCell{
+    color: var(--main_accent);}
+td.homeSocialTableCell:hover{
+    color: var(--main_light);
+    cursor: pointer;}
+img.homeSocialIcon{
+    width: var(--icon_size);
+    margin-right: 10px;}
+
+a.linkText{
+    color: var(--main_accent);
+    font-weight: 700;}
+a.linkText:hover{
+    color: var(--secondary_accent);}
+
+
+
+/* ----- Project Page Elements ----- */
+span.topSpan_Projects{
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */}
+div.bannerDiv_Projects{
+    position: relative;
+    background-color: rgba(17, 17, 17, 0.2);
+    width: 100%;
+    height: fit-content;
+    align-content: center;
+    justify-content: center; /* horizontal */
+    padding: 20px 20vw 30px 20vw;
+    backdrop-filter: blur(20px);
+    z-index: 1;
+    overflow: hidden;}
+text.bannerTitle{
+    font-size: 48px; 
+    font-style: oblique; 
+    font-weight: 700;}
+text.bannerFiller{
+    font-size: 20px; 
+    font-style: oblique; 
+    font-weight: 700;}
+
+/* Main Span for Project Table*/
+span.mainSpan_Projects{
+    position: relative;
+    width: 100%;
+    padding-bottom: 30px;}
+div.tableButtonContainer{
+    padding-top: 20px;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+    text-align: center;
+    overflow: visible;
+    white-space: nowrap;}
+button.tableButton, button.tableButton-active{
+    background-color: var(--secondary_dark);
+    border: 2px solid var(--main_accent);
+    border-radius: 20px;
+    margin: 5px 5px;
+    padding: 5px 10px;
+    color: var(--secondary_light);
+    font-weight: 700;}
+button.tableButton-active, button.tableButton:hover{
+    background-color: var(--tertiary_dark);
+    border: 2px solid var(--main_accent);
+    color: var(--main_light);}
+
+/* Styles for each Project Card Container*/
+div.projectTable{
+    position: relative;
+    margin: 0px 50px;}
+a.projectCardContainerLink{
+    text-decoration: none;
+    color: white;}
+div.projectCardContainer{
+    position: inherit;
+    aspect-ratio: 16 / 9; }
+div.projectCard{
+    position: absolute;
+    box-sizing: border-box;
+    border: 4px solid rgba(1, 93, 24, 0.808);
+    border-radius: 20px;
+    left: 0px; right: 0px; top: 0px; bottom: 0px;
+    margin: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transition-property: margin;
+    transform: scale(0);}
+div.projectCard:hover{
+    border: 4px solid var(--secondary_accent);
+    margin: 4px;
+    transition: all 0.3s ease;
+    transition-property: margin;
+    cursor: pointer;}
+div.projectCard.animate{
+    transform: scale(1);
+    transition: 0.5s}
+
+/* Styles for content inside Project Card*/
+img.projectThumbnail{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;}
+text.projectCardBanner{
+    position: relative;
+    box-sizing: border-box;
+    min-width: calc(fit-content);
+    max-width: 100%;
+    background-color: var(--secondary_dark);
+    left: 0px;
+    top: 0px;
+    padding: 3px 25px 5px 10px;
+    z-index: 1;
+    color: var(--secondary_accent);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-style: oblique;
+    clip-path: polygon(
+        0% 0%,
+        0% calc(100% - 2px),
+        calc(100% - 17px) calc(100% - 2px),
+        calc(100% - 3px) 0%
+    );
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: clip;}
+div.projectCardBannerOuter{
+    position: absolute;
+    max-width: 100%;
+    background-color: rgb(204, 153, 0);
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    padding-bottom: 3px;
+    color: var(--secondary_accent);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-style: oblique;
+    clip-path: polygon(
+        0% 0%,
+        0% 100%,
+        calc(100% - 15px) 100%,
+        100% 0%
+    );
+    overflow: hidden;}
+div.projectCardFooter{
+    position: absolute;
+    background-color: rgba(17, 17, 17, 0.6);
+    left: 0px; right: 0px; bottom: 0px;
+    height: 40px;
+    padding: 10px 0px;
+    align-content: center;}
+div.projectCardFooterDate{
+    position: absolute;
+    top: 0px; bottom: 0px;
+    margin: auto;
+    padding: 0px 30px;
+    align-content: center;
+    font-size: 0.9vw;
+    font-weight: 700;
+    color: white;}
+div.projectCardFooterTagContainer{
+    position: absolute;
+    top: 0px; bottom: 0px; right: 0px;
+    height: fit-content;
+    margin: auto;
+    padding: 5px 30px;
+    align-content: center;
+    font-size: 0.7vw;
+    font-weight: 700;
+    color: white;}
+
+img.projectIcon{
+    content: url(./Assets/General/Projects/projectIcon.svg);
+    width: 48px; height: 48px;
+    margin: 10px;}
+img.projectIcon:hover, p.resumeLink:hover .projectIcon{
+    content: url(./Assets/General/Projects/projectIcon_hover.svg);
+    cursor: pointer;}
+
+
+
+/* ----- Contact Page Elements ----- */
+div.topSpan_Contact{
+    position: relative;
+    max-height: 360px;
+    min-height: 200px;
+    align-content: baseline;
+    overflow: hidden;
+    z-index: 1;}
+div.botSpan_Contact{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    align-content: end;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    z-index: 0;}
+div.mainSpan_Container{
+    position: absolute; 
+    width: 100%; 
+    height: calc(100%); 
+    top: 0px; 
+    left: 0px;
+    padding-top: 64px;}
+
+div.mainSpan_Form{
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+    top: 0px; bottom: 0px; right: 10%;
+    margin: auto;
+    margin-top: 5vh;
+    padding: 60px 50px;
+    width: fit-content;
+    height: fit-content;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+div.mainSpan_Contact{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 0px 0px 5vh 12vw;
+}
+
+input.form-control, textarea.form-control, .contactFormBtn{
+    border: 0.5px solid rgb(201, 201, 201);
+    background-color: rgb(232, 232, 232);
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+}
+form.formContainer{
+    width: 380px;
+    height: fit-content;
+    margin-top: 30px;
+}
+.contactFormBtn{
+    width: 90%;
+    margin-top: 10px;
+    justify-self: center;
+    border-radius: 10px;
+    border: 3px solid var(--main_accent)
+}
+div.mediaContainer{
+    width: 460px;
+    height: fit-content;
+}
+img.contactSocialIcon{
+    width: var(--icon_size);
+    margin: 30px 30px 0px 0px;
+    transition: transform .3s ease-out;
+}
+img.contactSocialIcon:hover{
+    cursor: pointer;
+    transform: translate(0, -5px);
+}
+.hoverableElement:hover{
+    cursor: pointer;
+}
