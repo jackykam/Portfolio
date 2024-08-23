@@ -168,7 +168,7 @@
                             <div class="sectionText col-lg-7">
                                 <p class="sectionHeading">Ideation:</p>
                                 <p style="padding: 10px 0px;">
-                                    The first step was to work with my team to examine the competition guidelines and determine the limitations our payload system was to work within. The payload deployment mechanism would have to release 5x 500g payloads from a height of 75ft AGL onto 20ft - radius targets. The payload must hit the ground with a ‘soft descent’ (decided to be < 2m/s), and be easily removable from any deployment mechanism. 
+                                    The first step was to work with my team to examine the competition guidelines and determine limitations. The payload deployment mechanism would have to release 5x 500g payloads from a height of 75ft AGL onto 20ft - radius targets. The payload must hit the ground with a ‘soft descent’ (decided to be < 2m/s), and be easily removable from any deployment mechanism. 
                                 </p>
                             </div>
                             <div class="sectionText col-lg-4" style="text-align: center; align-content: center;">
@@ -181,10 +181,10 @@
                             <div class="sectionText col-lg-8">
                                 <p class="sectionHeading">Enclosure Modeling:</p>
                                 <p>
-                                    The enclosure shell was split into 4 parts to accommodate the iteration cycle, with the nose / tail and the sides being mirrors of one another for ease of manufacturing and assembly. Once the initial length was determined to enclose the water bottles and winch system, I guided the students through the surface modeling process to generate smooth curved surfaces using splines and surface sweeps, lofts, and knitting.
+                                    The enclosure shell was split into 4 parts to accommodate the iteration cycle, with the nose / tail and the sides being mirrors of one another for ease of manufacturing and assembly. Once the enclosure length was determined, I guided the students through the surface modeling process making use of splines, sweeps, lofts, and knitting.
                                 </p>
                                 <p>
-                                    From here, I aided in the process of transferring the models to analysis software in order to perform Computational Fluid Dynamic (CFD) Analysis, allowing the members to tweak curves, before finally moving into Finite Element Analysis (FEA) to determine material reduction based on factors of safety.
+                                    From here, I aided in transferring the models to analysis software in order to perform Computational Fluid Dynamic (CFD) Analysis, allowing the members to tweak curves, before finally moving into Finite Element Analysis (FEA) for material reduction based on factors of safety.
                                 </p>
                             </div>
 
@@ -198,10 +198,10 @@
                             <div class="sectionText col-lg-7">
                                 <p class="sectionHeading">Braking System:</p>
                                 <p>
-                                    The braking system was the most complex part of the design process. Due to weight constraints, having individual modules to control the descent of each payload would exceed limitations. Following research and contacting electro-mechanical suppliers, we were able to pivot to using electromagnetic clutches, which act as a bearing when unpowered, but engage using friction when current is supplied.
+                                    The braking system was the most complex part of the design process. Due to weight constraints, having individual modules to control the descent of each payload would exceed limitations. Following research and contacting electro-mechanical suppliers, we were able to source electromagnetic clutches, which act as a bearing when unpowered, but engage using friction when current is supplied.
                                 </p>
                                 <p>
-                                    From this, the entire winch system could be powered from one encoded motor, with each payload only coupling when signal is supplied to the EM brake, allowing non-sequential deployment, and velocity control through a PID loop monitoring the rotational speed of the motor shaft.
+                                    From this, the entire winch system could be powered from one encoded motor, with each payload only coupling when signal is supplied to the EM brake. Velocity control was achieved through a PID loop monitoring the rotational speed of the motor shaft.
                                 </p>
                             </div>
                             <div class="sectionText col-lg-4" style="text-align: center; align-content: center;">
@@ -214,7 +214,7 @@
                             <div class="sectionText col-lg-7">
                                 <p class="sectionHeading">Fabrication:</p>
                                 <p>
-                                    Initially, components were 3D printed from ABS, though due to the need for lighter weight, components were shifted to materials with lighter density. The nose and tail were switched to lightweight PLA, a more porous version of standard PLA, while mounting panels were waterjet cut from carbon-balsa sandwich panels. For the motor and spool supporting brackets, they were waterjet cut from ⅛” aluminum sheet metal, and bent into shape.
+                                    Initially, components were 3D printed from ABS, before being shifted to materials with lighter density. The nose and tail were switched to lightweight PLA, while mounting panels were waterjet cut from carbon-balsa sandwich panels. For the motor and spool supporting brackets, they were waterjet cut from ⅛” aluminum sheet metal, and bent into shape.
                                 </p>
                             </div>
 
@@ -226,7 +226,7 @@
                 </div>
                 <hr class="sectionSeperator">
 
-                <!--Process-->
+                <!--Results-->
                 <div class="container nav_section" id="sectionResults_EMWinch" style="padding-bottom: 32px;">
                     <text class="sectionTitle">RESULTS</text>
                     <div class="sectionText">

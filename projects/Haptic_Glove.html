@@ -216,7 +216,7 @@
                                     The glove was developed using surface modeling to generate a surface which best conforms to the hand. In order to minimize the weight, the back-of-palm enclosure contains the PCB and IMU, while channels carved into the sides allow wiring to reach the forearm enclosure, where the bulk of the system is housed.
                                 </p>
                                 <p>
-                                    I made use of DFA principles by minimizing fasteners on the glove through pressure-fit components, and made sure all parts on the forearm could be easily accessed by implementing split lines where the enclosure could be disassembled for maintenance.
+                                    I made use of DFA principles to minimize fasteners on the glove through pressure-fit components, and made sure all parts on the forearm could be easily accessed by implementing split lines for disassembly and maintenance.
                                 </p>
                             </div>
                             <div class="sectionText col-lg-5" style="text-align: center;">
@@ -245,10 +245,10 @@
                             <div class="sectionText col-lg-7">
                                 <p class="sectionHeading">Fabrication:</p>
                                 <p>
-                                    Our finalized parts were sent to an external manufacturer to produce the components from Multi-Jet Fusion (MJF) 3D printing. PA12-HP Nylon served our purposes better than PLA or ABS due to having a lower density, while also having comparable strength and isotropic properties (compared to FDM printing). The finger linkages were waterjet cut from ⅛” aluminum sheet before being post-processed by hand. Each linkage was tested for any play resulting from machine tolerances, before being fit onto the palm assembly.
+                                    Our finalized parts were sent to an external manufacturer to be fabricated from Multi-Jet Fusion (MJF) 3D printing. PA12-HP Nylon served our purposes better than PLA or ABS due to having a lower density, while also having comparable strength and isotropic properties. The finger linkages were waterjet cut from ⅛” aluminum sheet before being post-processed by hand. Each linkage was tested for any play resulting from machine tolerances, before being fit onto the palm assembly.
                                 </p>
                                 <p>
-                                    Finally, a custom PCB was designed making use of an ESP-32 microcontroller on a custom breakout board modified for 5V, 6V, and 12V rails for all the components. The PCB was designed to be scalable, allowing the same board to be used on both the glove and the EoAT.
+                                    Finally, a custom PCB was designed making use of an ESP-32 microcontroller on a custom breakout board modified with 5V, 6V, and 12V rails for all the components. The PCB was designed to be interchangeable, allowing the same board to be used on both the glove and the EoAT.
                                 </p>
                             </div>
                             <div class="sectionText col-lg-5" style="text-align: center;">
@@ -261,10 +261,10 @@
                             <div class="sectionText col-lg-7">
                                 <p class="sectionHeading">Software:</p>
                                 <p>
-                                    In parallel with the development of the physical glove and EoAT, one of our members was developing software which would translate position information from the IMU (a given point in space) and perform inverse kinematics to generate a realistic pathway for the robot arm to trace.
+                                    In parallel with the development of the physical glove and EoAT, one of our members was developing software which would interpret position information from the IMU (a given point in space) and perform inverse kinematics to generate an acheivable pathway for the robot arm to trace.
                                 </p>
                                 <p>
-                                    Though our team had gotten limited access to a robot arm, this was near the end of the project timeline so we were not able to integrate the full product in time for a final demonstration. Our workaround was a visualizer which could show the individual prismatic and revolute joints, allowing us to demonstrate the path finding algorithm despite not having a physical robot arm.
+                                    Though our team had gotten limited access to a robot arm, this was near the end of the project timeline so we were not able to integrate the full product in time for a final demonstration. Our workaround was a visualizer which could show the individual prismatic and revolute joints, allowing us to demonstrate the path finding algorithm.
                                 </p>
                             </div>
                             <div class="sectionText col-lg-5" style="text-align: center;">
